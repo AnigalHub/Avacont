@@ -71,7 +71,7 @@
         background-color: rgba(0, 0, 0, 0.2);
     }
     #home{
-        background: url("../../public/images/background_1.jpg") 100% 100% no-repeat;
+        background: url("../../public/images/background/background_1.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
     }
     ul{

@@ -62,7 +62,7 @@
         width: 40px !important;
     }
     .navbar{
-        background: #e1d3ca;
+        background: #b8a59c;
         background-size:cover;
         border-bottom: 5px #4E2B0B !important;
         padding: 0 !important;

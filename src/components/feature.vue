@@ -8,9 +8,7 @@
                     <div class="number">{{catalog.number}}</div>
                     <div class="number_descr">{{catalog.number_descr}}</div>
                 </b-col>
-                <b-col class="text">
-                    {{catalog.descr}}
-                </b-col>
+                <b-col class="text">{{catalog.descr}}</b-col>
                 <b-col cols="4">
                     <b-row>
                         <b-col  v-for="(value, index) in catalog.img" :key="index">
@@ -19,83 +17,6 @@
                     </b-row>
                 </b-col>
             </b-row>
-          <!--  <b-row class="part">
-                <b-col cols="2">
-                    Более
-                    <div class="number">30</div>
-                    позиций
-                </b-col>
-                <b-col class="text">
-                    Мы изготавливаем более 30 видов деревянных накладок, и продолжаем разрабатывать новые дизайны и функциональность изделий!
-                </b-col>
-                <b-col cols="4">
-                    <b-row>
-                        <b-col>
-                            <img src="../assets/images/12.jpg"/>
-                        </b-col>
-                        <b-col>
-                            <img src="../assets/images/11.jpg"/>
-                        </b-col>
-                    </b-row>
-                </b-col>
-            </b-row>
-            <b-row class="part">
-                <b-col cols="2">
-                    <div class="number">8</div>
-                    Диаметров бревна
-                </b-col>
-                <b-col class="text">
-                    Мы разработали изделия для 8 самых распространенных размеров бревен. Если у Вас нестандартное бревно, то пишите - мы обязательно что-нибудь придумаем!
-                </b-col>
-                <b-col cols="4">
-                    <img src="../assets/images/diameter.jpg"/>
-                    <img src="../assets/images/diameter_2.jpg"/>
-                </b-col>
-            </b-row>
-            <b-row class="part">
-                <b-col cols="2">
-                    <div class="number">3</div>
-                    Вида материала
-                </b-col>
-                <b-col class="text">
-                    Компания "Аваконт" создает изделия любого оттенка дерева из трех плотных материалов: сосна, ясень, бук, дуб.
-                </b-col>
-                <b-col cols="4">
-                    <b-row>
-                        <b-col>
-                            <img src="../assets/images/сосна.jpg"  class="materials size"/>
-                        </b-col>
-                        <b-col>
-                            <img src="../assets/images/ясень.jpg"  class="materials size"/>
-                        </b-col>
-                        <b-col>
-                            <img src="../assets/images/бук.jpg"  class="materials size"/>
-                        </b-col>
-                        <b-col>
-                            <img src="../assets/images/дуб.jpg"  class="materials size"/>
-                        </b-col>
-                    </b-row>
-                </b-col>
-            </b-row>
-            <b-row class="part">
-                <b-col cols="2">
-                    <div class="number">2</div>
-                   Типа стен
-                </b-col>
-                <b-col class="text">
-                    Наши изделия предусмотрены для бревенчатых стен и блок-хауса.
-                </b-col>
-                <b-col cols="4">
-                    <b-row>
-                        <b-col>
-                            <img src="../assets/images/бревенчатые.jpg" class="size"/>
-                        </b-col>
-                        <b-col>
-                            <img src="../assets/images/блок-хаус.jpg" class="size"/>
-                        </b-col>
-                    </b-row>
-                </b-col>
-            </b-row> -->
         </b-container>
     </div>
 </template>
@@ -182,7 +103,7 @@
 <style scoped lang="scss">
 
     #feature{
-        background: url("../../public/images/background_2.jpg") 100% 100% no-repeat;
+        background: url("../../public/images/background/background_2.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
         padding-bottom: 5% !important;
     }

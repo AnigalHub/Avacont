@@ -33,7 +33,7 @@
 
 <style scoped lang="scss">
     #feedback{
-        background: url("../../public/images/background_5.jpg") 100% 100% no-repeat;
+        background: url("../../public/images/background/background_5.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
     }
     input{

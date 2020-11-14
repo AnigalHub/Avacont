@@ -58,7 +58,7 @@
 
 <style  scoped lang="scss">
     #contact{
-    background: url("../../public/images/background_2.jpg") 100% 100% no-repeat;
+    background: url("../../public/images/background/background_2.jpg") 100% 100% no-repeat;
     background-size:100% 100%;
     padding-bottom: 2.5%;
     }
