@@ -2,33 +2,33 @@
     <div id="catalog">
         <b-container>
             <h2>Накладки</h2>
-            <h3>Накладки под розетки  и выключатели на бревно</h3>
+            <h3>Накладки для скрытой проводки</h3>
             <b-row>
                 <b-col>
-                    <img src="../assets/images/31.jpg"/>
+                    <img src="../../public/images/31.jpg"/>
                     <h4>Накладки с открытой установкой</h4>
                 </b-col>
                 <b-col>
-                    <img src="../assets/images/32.jpg"/>
+                    <img src="../../public/images/32.jpg"/>
                     <h4>Накладки со скрытой установкой</h4>
                 </b-col>
                 <b-col>
-                    <img src="../assets/images/33.jpg"/>
+                    <img src="../../public/images/33.jpg"/>
                     <h4>Ретро накладки</h4>
                 </b-col>
             </b-row>
             <h3>Накладки под розетки и выключатели между бревен</h3>
             <b-row>
                 <b-col>
-                    <img src="../assets/images/34.jpg"/>
+                    <img src="../../public/images/34.jpg"/>
                     <h4>Накладки с открытой установкой</h4>
                 </b-col>
                 <b-col>
-                    <img src="../assets/images/35.jpg"/>
+                    <img src="../../public/images/35.jpg"/>
                     <h4>Накладки со скрытой установкой</h4>
                 </b-col>
                 <b-col>
-                    <img src="../assets/images/36.jpg"/>
+                    <img src="../../public/images/36.jpg"/>
                     <h4>Ретро накладки</h4>
                 </b-col>
             </b-row>
@@ -41,15 +41,15 @@
                 </b-col>
                 <b-row>
                     <b-col>
-                        <img src="../assets/images/37.jpg"/>
+                        <img src="../../public/images/37.jpg"/>
                         <h4>Накладки на бревно</h4>
                     </b-col>
                     <b-col>
-                        <img src="../assets/images/38.jpg"/>
+                        <img src="../../public/images/38.jpg"/>
                         <h4>Накладки межбревно</h4>
                     </b-col>
                     <b-col>
-                        <img src="../assets/images/39.jpg"/>
+                        <img src="../../public/images/39.jpg"/>
                         <h4>Накладки на бревно</h4>
                     </b-col>
                 </b-row>
@@ -66,16 +66,22 @@
 
 <style scoped lang="scss">
     #catalog{
-        background: url("../../src/assets/images/background_2.jpg") 100% 100% no-repeat;
+        background: url("../../public/images/background_2.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
         padding-bottom: 2%;
+    }
+    .two{
+        margin-right: 10% !important;
+        margin-left: 10% !important;
+        margin-top: 2% !important;
     }
     h2{
         padding-bottom: 0.2% !important;
     }
     h3{
         font-family: 'Viaoda Libre', cursive;
-        padding: 0.5% 0; font-weight: 800;
+        padding: 0.5% 0;
+        font-weight: 800;
         color: #5a330c;
     }
     h3,h4{

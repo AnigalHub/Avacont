@@ -50,11 +50,15 @@ export default {
     height: 100%;
     margin: 0 !important;
     padding: 0 !important;
-    background: url("assets/images/navbar.jpg") 100% 100%;
+    background: url("../public/images/navbar.jpg") 100% 100%;
   }
   .container-fluid{
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+  .container{
+      padding-right: 15px !important;
+      padding-left: 15px !important;
   }
   .row {
     margin: 0 !important;
@@ -100,7 +104,10 @@ export default {
   #feature, #catalog,
   #portfolio,
   #contact{
-    padding: 1.5% 0;
+    padding: 1.8% 0;
+  }
+  #delivery h2{
+    margin-top: 1.8%;
   }
   img{
     width: 100%;
