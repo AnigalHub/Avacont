@@ -15,23 +15,23 @@
             return{
                 Images:[
                     {
-                        src: "./images/23.jpg",
+                        src: "./images/images/pad_on_switch.jpg",
                         alt: "Накладка_на_выключатель",
                     },
                     {
-                        src: "./images/21.jpg",
+                        src: "./images/images/pad_on_2_sockets.jpg",
                         alt: "Накладка_на_2_розетки",
                     },
                     {
-                        src: "./images/22.jpg",
+                        src: "./images/images/pad_on_night_light.jpg",
                         alt: "Накладка_на_ночник",
                     },
                     {
-                        src: "./images/24.jpg",
+                        src: "./images/images/triple_pad.jpg",
                         alt: "Тройная_накладка_на_бревно",
                     },
                     {
-                        src: "./images/25.jpg",
+                        src: "./images/images/pad_between_logs.jpg",
                         alt: "Межбревная_наладка",
                     },
                 ],
