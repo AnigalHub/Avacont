@@ -2,7 +2,24 @@
     <div id="feature">
         <b-container>
             <h2>Характеристики изделий</h2>
-            <b-row class="part">
+            <b-row class="part" v-for="(catalog, index) in calalog" :key="index">
+                <b-col cols="2">
+                    <div class="number_descr">{{catalog.number_descr_2}}</div>
+                    <div class="number">{{catalog.number}}</div>
+                    <div class="number_descr">{{catalog.number_descr}}</div>
+                </b-col>
+                <b-col class="text">
+                    {{catalog.descr}}
+                </b-col>
+                <b-col cols="4">
+                    <b-row>
+                        <b-col  v-for="(value, index) in catalog.img" :key="index">
+                            <img :src="value.src" :alt="value.alt"/>
+                        </b-col>
+                    </b-row>
+                </b-col>
+            </b-row> -->
+          <!--  <b-row class="part">
                 <b-col cols="2">
                     Более
                     <div class="number">30</div>
@@ -32,7 +49,7 @@
                 </b-col>
                 <b-col cols="4">
                     <img src="../assets/images/diameter.jpg"/>
-                        <img src="../assets/images/diameter_2.jpg"/>
+                    <img src="../assets/images/diameter_2.jpg"/>
                 </b-col>
             </b-row>
             <b-row class="part">
@@ -41,10 +58,13 @@
                     Вида материала
                 </b-col>
                 <b-col class="text">
-                    Компания "Аваконт" создает изделия любого оттенка дерева из трех плотных материалов: ясень, бук, дуб.
+                    Компания "Аваконт" создает изделия любого оттенка дерева из трех плотных материалов: сосна, ясень, бук, дуб.
                 </b-col>
                 <b-col cols="4">
                     <b-row>
+                        <b-col>
+                            <img src="../assets/images/сосна.jpg"  class="materials size"/>
+                        </b-col>
                         <b-col>
                             <img src="../assets/images/ясень.jpg"  class="materials size"/>
                         </b-col>
@@ -75,20 +95,94 @@
                         </b-col>
                     </b-row>
                 </b-col>
-            </b-row>
+            </b-row> -->
         </b-container>
     </div>
 </template>
 
 <script>
     export default {
-        name: "feature"
+        name: "feature",
+        data(){
+            return{
+                calalog:[
+                    {
+                        number: "30",
+                        number_descr:"позиций",
+                        number_descr_2:"Более",
+                        descr: "Мы изготавливаем более 30 видов деревянных накладок, и продолжаем разрабатывать новые дизайны и функциональность изделий!",
+                        img:[
+                            {
+                                src: "./images/12.jpg",
+                                alt: "накладка_1_типа",
+                            },
+                            {
+                                src: "./images/11.jpg",
+                                alt: "накладка_2_типа",
+                            },
+                        ],
+                    },
+                    {
+                        number:"8",
+                        number_descr:" Диаметров бревна",
+                        number_descr_2:"",
+                        descr: "Мы разработали изделия для 8 самых распространенных размеров бревен. Если у Вас нестандартное бревно, то пишите - мы обязательно что-нибудь придумаем!",
+                        img:[
+                            {
+                                src: "./images/диаметры.png",
+                                alt: "диаметр_бревна",
+                            },
+                        ],
+                    },
+                    {
+                        number: "3",
+                        number_descr:" Вида материала",
+                        number_descr_2:"",
+                        descr: " Компания создает изделия любого оттенка дерева из трех плотных материалов: сосна, ясень, бук, дуб.",
+                        img:[
+                            {
+                                src: "./images/ясень.jpg",
+                                alt: "сосна",
+                            },
+                            {
+                                src: "./images/ясень.jpg",
+                                alt: "Оясень",
+                            },
+                            {
+                                src: "./images/бук.jpg",
+                                alt: "бук",
+                            },
+                            {
+                                src: "./images/дуб.jpg",
+                                alt: "дуб",
+                            },
+                        ],
+                    },
+                    {
+                        number: "2",
+                        number_descr:"Типа стен",
+                        number_descr_2:"",
+                        descr: "  Наши изделия предусмотрены для бревенчатых стен и блок-хауса.",
+                        img:[
+                            {
+                                src: "./images/бревенчатые.jpg",
+                                alt: "бревенчатые",
+                            },
+                            {
+                                src: "./images/блок-хаус.jpg",
+                                alt: "блок-хаус",
+                            },
+                        ],
+                    },
+                ]
+            }
+        }
     }
 </script>
-
 <style scoped lang="scss">
+
     #feature{
-        background: url("../../src/assets/images/background_2.jpg") 100% 100% no-repeat;
+        background: url("../../public/images/background_2.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
         padding-bottom: 5% !important;
     }
@@ -107,7 +201,7 @@
     .size{
         box-shadow: 2px 5px 5px #7c5639;
     }
-    .materials{
+    img:nth-child(4),img:nth-child(5),img:nth-child(6),  img:nth-child(7){
         border-radius: 50%;
     }
     .col,.col-2,.col-4{
@@ -142,12 +236,17 @@
             }
         }
         .col-4{
-
                 width: 70%;
                 display: block;
                 margin-left: auto !important;
                 margin-right: auto !important;
 
+        }
+        img {
+            width: 90% !important;
+        }
+        .col{
+            margin-top: -4% !important;
         }
     }
     @media screen and (max-width: 768px) {
