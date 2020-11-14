@@ -1,20 +1,8 @@
 <template>
     <div>
         <b-row>
-            <b-col>
-                <img src="../assets/images/23.jpg" width="100%"/>
-            </b-col>
-            <b-col>
-                <img src="../assets/images/21.jpg" width="100%"/>
-            </b-col>
-            <b-col>
-                <img src="../assets/images/22.jpg" width="100%"/>
-            </b-col>
-            <b-col>
-                <img src="../assets/images/24.jpg" width="100%"/>
-            </b-col>
-            <b-col>
-                <img src="../assets/images/25.jpg" width="100%"/>
+            <b-col v-for="(image, index) in Images" :key="index">
+                <img :src="image.src" :alt="image.alt"/>
             </b-col>
         </b-row>
     </div>
@@ -22,7 +10,33 @@
 
 <script>
     export default {
-        name: "images"
+        name: "images",
+        data(){
+            return{
+                Images:[
+                    {
+                        src: "./images/23.jpg",
+                        alt: "Накладка_на_выключатель",
+                    },
+                    {
+                        src: "./images/21.jpg",
+                        alt: "Накладка_на_2_розетки",
+                    },
+                    {
+                        src: "./images/22.jpg",
+                        alt: "Накладка_на_ночник",
+                    },
+                    {
+                        src: "./images/24.jpg",
+                        alt: "Тройная_накладка_на_бревно",
+                    },
+                    {
+                        src: "./images/25.jpg",
+                        alt: "Межбревная_наладка",
+                    },
+                ],
+            }
+        }
     }
 </script>
 
