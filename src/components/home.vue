@@ -20,28 +20,25 @@
                     </b-col>
                     <b-col>
                         <b-carousel
-                                id="carousel-fade"
-                                fade
-                                indicators
-                        >
+                                id="carousel-fade" fade indicators>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/1.jpg"/>
+                                    <img src="../../public/images/home/double_pad.jpg"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/2.jpg"/>
+                                    <img src="../../public/images/home/log_pad.jpg"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/3.jpg"/>
+                                    <img src="../../public/images/home/pad_on_switch.jpg"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/4.jpg"/>
+                                    <img src="../../public/images/home/triple_pad.jpg"/>
                                 </template>
                             </b-carousel-slide>
                         </b-carousel>
