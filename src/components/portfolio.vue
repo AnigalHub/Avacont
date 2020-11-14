@@ -19,51 +19,51 @@
                 publicPath: process.env.BASE_URL,
                 Portfolio:[
                     {
-                        src: "./images/41.jpg",
+                        src: "./images/portfolio/round_pad_on_3_sockets.jpg",
                         alt: "Круглая_накладка_на_3_розетки",
                     },
                     {
-                        src: "./images/42.jpg",
+                        src: "./images/portfolio/round_pad_on_3_switch.jpg",
                         alt: "Квадратная_накладка_на_3_выключателя",
                     },
                     {
-                        src: "./images/43.jpg",
+                        src: "./images/portfolio/pad_on_log.jpg",
                         alt: "Накладка_на_бревно",
                     },
                     {
-                        src: "./images/44.jpg",
+                        src: "./images/portfolio/double_pad_on_log.jpg",
                         alt: "Двойная_накладка_на_бревно",
                     },
                     {
-                        src: "./images/45.jpg",
+                        src: "./images/portfolio/pad_on_switch.jpg",
                         alt: "Накладка_под_выключатель",
                     },
                     {
-                        src: "./images/46.jpeg",
+                        src: "./images/portfolio/pad_with_hidden_installation.jpeg",
                         alt: "Накладка_со_скрытой_установкой",
                     },
                     {
-                        src: "./images/47.jpg",
+                        src: "./images/portfolio/retro_pad.jpg",
                         alt: "Ретро_накладка",
                     },
                     {
-                        src: "./images/48.jpg",
+                        src: "./images/portfolio/retro_pad_under_log.jpg",
                         alt: "Ретро_накладка_под_бревно",
                     },
                     {
-                        src: "./images/49.jpg",
+                        src: "./images/portfolio/pad_under_different_sockets.jpg",
                         alt: "Накладка_под_разные_розетки",
                     },
                     {
-                        src: "./images/50.jpg",
+                        src: "./images/portfolio/pad_under_log_on_switches.jpg",
                         alt: "Накладка_под_бревно_на_выключатели",
                     },
                     {
-                        src: "./images/51.jpg",
+                        src: "./images/portfolio/pad_of_dark_oak_under_switches.jpg",
                         alt: "Накладка_из_темного_дуба_под_выключатели",
                     },
                     {
-                        src: "./images/52.jpg",
+                        src: "./images/portfolio/pad_under_socket.jpg",
                         alt: "Накладка_под_розетку",
                     },
                 ],
