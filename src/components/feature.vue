@@ -18,7 +18,7 @@
                         </b-col>
                     </b-row>
                 </b-col>
-            </b-row> -->
+            </b-row>
           <!--  <b-row class="part">
                 <b-col cols="2">
                     Более
@@ -113,11 +113,11 @@
                         descr: "Мы изготавливаем более 30 видов деревянных накладок, и продолжаем разрабатывать новые дизайны и функциональность изделий!",
                         img:[
                             {
-                                src: "./images/12.jpg",
+                                src: "./images/feature/type_1_pad.jpg",
                                 alt: "накладка_1_типа",
                             },
                             {
-                                src: "./images/11.jpg",
+                                src: "./images/feature/type_2_pad.jpg",
                                 alt: "накладка_2_типа",
                             },
                         ],
@@ -129,7 +129,7 @@
                         descr: "Мы разработали изделия для 8 самых распространенных размеров бревен. Если у Вас нестандартное бревно, то пишите - мы обязательно что-нибудь придумаем!",
                         img:[
                             {
-                                src: "./images/диаметры.png",
+                                src: "./images/feature/diameters.png",
                                 alt: "диаметр_бревна",
                             },
                         ],
@@ -141,19 +141,19 @@
                         descr: " Компания создает изделия любого оттенка дерева из трех плотных материалов: сосна, ясень, бук, дуб.",
                         img:[
                             {
-                                src: "./images/ясень.jpg",
+                                src: "./images/feature/pine.jpg",
                                 alt: "сосна",
                             },
                             {
-                                src: "./images/ясень.jpg",
-                                alt: "Оясень",
+                                src: "./images/feature/ash.jpg",
+                                alt: "Ясень",
                             },
                             {
-                                src: "./images/бук.jpg",
+                                src: "./images/feature/beech.jpg",
                                 alt: "бук",
                             },
                             {
-                                src: "./images/дуб.jpg",
+                                src: "./images/feature/oak.jpg",
                                 alt: "дуб",
                             },
                         ],
@@ -165,11 +165,11 @@
                         descr: "  Наши изделия предусмотрены для бревенчатых стен и блок-хауса.",
                         img:[
                             {
-                                src: "./images/бревенчатые.jpg",
+                                src: "./images/feature/log.jpg",
                                 alt: "бревенчатые",
                             },
                             {
-                                src: "./images/блок-хаус.jpg",
+                                src: "./images/feature/block-house.jpg",
                                 alt: "блок-хаус",
                             },
                         ],
