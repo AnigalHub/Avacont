@@ -1,9 +1,9 @@
 <template>
-    <b-navbar class="navbar-expand-xl sticky-top " toggleable>
+    <b-navbar id="Nav" class="navbar-expand-xl sticky-top " toggleable>
         <b-container>
-            <b-navbar-brand>
-                <img src="../assets/images/hands.jpg"  style="float: left" width="40px" height="40px"/>
-                <div class="name_company"> АВАКОНТ</div>
+            <b-navbar-brand href=#home @click.prevent="scrollToTop()">
+                <img src="../../public/favicon.jpg"  style="float: left" width="40px" height="40px"/>
+                <div class="name_company">АВАКОНТ</div>
                 <div class="description_name">производственная компания</div>
             </b-navbar-brand>
             <b-navbar-toggle target="navbar-toggle-collapse">
@@ -14,11 +14,11 @@
             </b-navbar-toggle>
             <b-collapse id="navbar-toggle-collapse" class="justify-content-end" is-nav v-model="isExpanded">
                 <b-navbar-nav>
-                    <b-nav-item>Характеристики</b-nav-item>
-                    <b-nav-item>Каталог</b-nav-item>
-                    <b-nav-item>Доставка</b-nav-item>
-                    <b-nav-item>Наши работы</b-nav-item>
-                    <b-nav-item>Контакты</b-nav-item>
+                    <b-nav-item @click="scrollToId" href="#feature">Характеристики</b-nav-item>
+                    <b-nav-item @click="scrollToId" href="#catalog">Каталог</b-nav-item>
+                    <b-nav-item @click="scrollToId" href="#delivery">Доставка</b-nav-item>
+                    <b-nav-item @click="scrollToId" href="#portfolio">Наши работы</b-nav-item>
+                    <b-nav-item @click="scrollToId" href="#contact">Контакты</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-container>
@@ -27,18 +27,44 @@
 
 <script>
     export default {
-        name: "navbar"
+        name: "navbar",
+        data(){
+            return {
+                isExpanded: false,
+            }
+        },
+        methods:{
+            scrollToTop(){
+                window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+            },
+            scrollToId(event){
+                let offsetY = 0;
+                if(this.isExpanded){
+                    let nav = document.getElementById(("Nav"));
+                    let bounds =  nav.getBoundingClientRect();
+                    offsetY = bounds.height;
+                }
+                let element = document.getElementById(event.target.hash.replace("#", ""));
+                window.scrollTo({top: element.offsetTop - offsetY, left: 0, behavior: 'smooth'});
+                event.preventDefault();
+            }
+        }
     }
 </script>
 
 <style scoped lang="scss">
+    .navbar-brand{
+        padding-top: 0.2rem !important;
+        padding-bottom: 0.2rem !important;
+    }
     img{
         height: 40px !important;
         width: 40px !important;
     }
     .navbar{
-        background: url("../assets/images/navbar.jpg") 100% 100% no-repeat;
+        background: #e1d3ca;
         background-size:cover;
+        border-bottom: 5px #4E2B0B !important;
         padding: 0 !important;
     }
     .nav-link{
@@ -55,7 +81,7 @@
         text-shadow: 0.2em 0.2em 0.3em #8f745c;
     }
     .name_company{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: #4E2B0B;
         font-weight: 700;
         letter-spacing: 7px;
@@ -73,5 +99,11 @@
         box-shadow: 0.1em 0.1em 0.2em #8f745c;
         margin-right: 4px;
         border-radius: 7px;
+    }
+    @media screen and (max-width: 768px) {
+        .nav-link {
+            font-size: 1rem !important;
+            padding: 0.35rem 1rem !important;
+        }
     }
 </style>
