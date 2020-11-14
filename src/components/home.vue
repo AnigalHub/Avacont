@@ -26,22 +26,22 @@
                         >
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../assets/images/1.jpg"/>
+                                    <img src="../../public/images/1.jpg"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../assets/images/2.jpg"/>
+                                    <img src="../../public/images/2.jpg"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../assets/images/3.jpg"/>
+                                    <img src="../../public/images/3.jpg"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../assets/images/4.jpg"/>
+                                    <img src="../../public/images/4.jpg"/>
                                 </template>
                             </b-carousel-slide>
                         </b-carousel>
@@ -62,12 +62,19 @@
     }
 </script>
 
+<style>
+    @media screen and (max-width: 768px) {
+        .carousel-indicators {
+            display: none !important;
+        }
+    }
+</style>
 <style scoped lang="scss">
     #background{
         background-color: rgba(0, 0, 0, 0.2);
     }
     #home{
-        background: url("../../src/assets/images/background_1.jpg") 100% 100% no-repeat;
+        background: url("../../public/images/background_1.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
     }
     ul{
@@ -80,7 +87,7 @@
         font-size: 1.5rem;
         padding-bottom: 5%;
         color: rgba(255, 255, 255, 0.9);
-        list-style-image:url("../../src/assets/images/list.png");
+        list-style-image:url("../../public/images/list.png");
         font-weight: 600;
         font-family: 'Tenor Sans', sans-serif;
         text-shadow: 0.5px 0.5px 0.5px #7c5639;
