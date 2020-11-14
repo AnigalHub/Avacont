@@ -3,15 +3,13 @@
         <b-container>
             <b-row>
                 <b-col>
-                    +7 (495) 369-26-73
+                    <a :href=" link_phone"> {{phone}}</a>
                 </b-col>
                 <b-col>
-                    Московская обл.,
-                    г. Люберцы, Инициативная ул.,
-                    дом 34А, объект 3, офис 5.
+                    {{address}}
                 </b-col>
                 <b-col>
-                    priamyeruki@mail.ru
+                    <a :href="link_mail">{{mail}}</a>
                 </b-col>
             </b-row>
         </b-container>
@@ -20,7 +18,16 @@
 
 <script>
     export default {
-        name: "myfooter"
+        name: "myfooter",
+        data(){
+            return {
+                phone:'+7 (495) 369-26-73',
+                link_phone:'tel:+74953692673',
+                mail:'avacont@mail.ru',
+                link_mail:'mailto:avacont@mail.ru',
+                address:'Московская область, г. Люберцы, Инициативная ул., дом 34А, объект 3, офис 5.',
+            }
+        }
     }
 </script>
 
@@ -30,10 +37,21 @@
         background-size:100% 100%;
         padding: 0.8% 0;
     }
+    a {
+        text-shadow: 0.5px 0.5px 0.5px #7c644c;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    a:hover{
+        text-shadow: 0.5px 0.5px 0.5px #7c644c;
+        color: rgba(158, 113, 51, 0.53);
+        text-decoration: none !important;
+        font-weight: 700;
+    }
     .col:last-child,.col:first-child{
         padding-top: 2.2%;
     }
     .col{
+        cursor: default;
         font-size: 1.15rem;
         text-align: center;
         color: rgba(255, 255, 255, 0.9);
