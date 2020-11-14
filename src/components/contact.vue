@@ -7,15 +7,15 @@
                     <div class="address text">
                         <div class="telephone">
                             <u> Телефон: </u>
-                            +7(495)369-26-73
+                            <a :href=" link_phone"> {{phone}}</a>
                         </div>
                         <div class="mail">
                             <u>E-mail:</u>
-                            priamyeruki@mail.ru
+                            <a :href="link_mail">{{mail}}</a>
                         </div>
                         <div>
                             <u>Часы работы: </u><br>
-                            Пн. – Пт.: с 9:00 до 17:00
+                            {{working_hours}}
                         </div>
                         <div>
                             <u> Адрес производства: </u><br>
@@ -43,15 +43,34 @@
 
 <script>
     export default {
-        name: "contact"
+        name: "contact",
+        data(){
+            return {
+                working_hours:'Пн. – Пт.: с 9:00 до 18:00',
+                phone:'+7 (495) 369-26-73',
+                link_phone:'tel:+74953692673',
+                mail:'avacont@mail.ru',
+                link_mail:'mailto:avacont@mail.ru'
+            }
+        }
     }
 </script>
 
 <style  scoped lang="scss">
     #contact{
-    background: url("../../src/assets/images/background_2.jpg") 100% 100% no-repeat;
+    background: url("../../public/images/background_2.jpg") 100% 100% no-repeat;
     background-size:100% 100%;
     padding-bottom: 2.5%;
+    }
+    a {
+        text-shadow: 0.5px 0.5px 0.5px #7c644c;
+        color: #6a4827;
+    }
+    a:hover{
+        text-shadow: 0.5px 0.5px 0.5px #7c644c;
+        color: #5a3827;
+        text-decoration: none !important;
+        font-weight: 700;
     }
     .col-5 div{
         padding-bottom: 2%;
