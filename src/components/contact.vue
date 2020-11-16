@@ -19,15 +19,11 @@
                         </div>
                         <div>
                             <u> Адрес производства: </u><br>
-                            Московская обл.,
-                            г. Люберцы, Инициативная улица,
-                            дом 34А, объект 3, офис 5.
+                                {{manufacturers_address}}
                         </div>
                         <div>
                             <u> Адрес офиса продаж: </u><br>
-                            Московская обл., г. Котельники,
-                            тер.Новорязанское шоссе,
-                            дом 6, офис 9-10, этаж 2
+                            {{sales_office_address}}
                         </div>
                     </div>
                 </b-col>
@@ -42,10 +38,14 @@
 </template>
 
 <script>
+    import manufacturers_address from '../../public/documents/manufacturers_address';
+    import sales_office_address from '../../public/documents/sales_office_address.json';
     export default {
         name: "contact",
         data(){
             return {
+                manufacturers_address: manufacturers_address,
+                sales_office_address:sales_office_address,
                 working_hours:'Пн. – Пт.: с 9:00 до 18:00',
                 phone:'+7 (495) 369-26-73',
                 link_phone:'tel:+74953692673',
