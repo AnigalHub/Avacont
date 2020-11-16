@@ -7,7 +7,7 @@
                     <div class="address text">
                         <div class="telephone">
                             <u> Телефон: </u>
-                            <a :href=" link_phone"> {{phone}}</a>
+                            <a :href="'tel:'+ phone"> {{phone}}</a>
                         </div>
                         <div class="mail">
                             <u>E-mail:</u>
@@ -40,15 +40,17 @@
 <script>
     import manufacturers_address from '../../public/documents/manufacturers_address';
     import sales_office_address from '../../public/documents/sales_office_address.json';
+    import phone from '../../public/documents/phone.json';
     export default {
         name: "contact",
         data(){
             return {
                 manufacturers_address: manufacturers_address,
                 sales_office_address:sales_office_address,
+                phone:phone,
                 working_hours:'Пн. – Пт.: с 9:00 до 18:00',
-                phone:'+7 (495) 369-26-73',
-                link_phone:'tel:+74953692673',
+                //phone:'+7 (495) 369-26-73',
+                link_phone:'+74953692673',
                 mail:'avacont@mail.ru',
                 link_mail:'mailto:avacont@mail.ru'
             }
