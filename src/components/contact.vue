@@ -11,7 +11,7 @@
                         </div>
                         <div class="mail">
                             <u>E-mail:</u>
-                            <a :href="link_mail">{{mail}}</a>
+                            <a :href="'mailto:'+ mail">{{mail}}</a>
                         </div>
                         <div>
                             <u>Часы работы: </u><br>
@@ -19,7 +19,7 @@
                         </div>
                         <div>
                             <u> Адрес производства: </u><br>
-                                {{manufacturers_address}}
+                            {{manufacturers_address}}
                         </div>
                         <div>
                             <u> Адрес офиса продаж: </u><br>
@@ -49,10 +49,7 @@
                 sales_office_address:sales_office_address,
                 phone:phone,
                 working_hours:'Пн. – Пт.: с 9:00 до 18:00',
-                //phone:'+7 (495) 369-26-73',
-                link_phone:'+74953692673',
                 mail:'avacont@mail.ru',
-                link_mail:'mailto:avacont@mail.ru'
             }
         }
     }
