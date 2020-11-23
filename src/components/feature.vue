@@ -2,7 +2,7 @@
     <div id="feature">
         <b-container>
             <h2>Характеристики изделий</h2>
-            <b-row class="part" v-for="(catalog, index) in calalog" :key="index">
+            <b-row class="part" v-for="(catalog, index) in catalog" :key="index">
                 <b-col cols="2">
                     <div class="number_descr">{{catalog.number_descr_2}}</div>
                     <div class="number">{{catalog.number}}</div>
@@ -26,7 +26,7 @@
         name: "feature",
         data(){
             return{
-                calalog:[
+                catalog:[
                     {
                         number: "30",
                         number_descr:"позиций",
@@ -112,13 +112,14 @@
         border-bottom: 2px solid #7e4614;
     }
     .number{
-        font-weight: 400;
+        font-weight: 500;
         letter-spacing: 4px;
         font-family: 'Lobster', cursive;
         font-size: 4.5rem;
         color: #4f2f0d;
         text-shadow: 1px 1px 1px #ffffff;
     }
+
     .row:nth-child(3) .number_descr,.row:nth-child(4) .number_descr{
         line-height: 2rem;
     }
