@@ -51,6 +51,7 @@ export default {
     margin: 0 !important;
     padding: 0 !important;
     background: url("../public/images/navbar.jpg") 100% 100%;
+    filter: contrast(110%);
   }
   .container-fluid{
     padding-left: 0 !important;
