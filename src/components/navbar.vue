@@ -2,7 +2,7 @@
     <b-navbar id="Nav" class="navbar-expand-xl sticky-top " toggleable>
         <b-container>
             <b-navbar-brand href=#home @click.prevent="scrollToTop()">
-                <img src="../../public/favicon.jpg"  style="float: left" width="40px" height="40px"/>
+                <img src="../../public/favicon.jpg"/>
                 <div class="name_company">АВАКОНТ</div>
                 <div class="description_name">производственная компания</div>
             </b-navbar-brand>
@@ -60,6 +60,7 @@
     img{
         height: 40px !important;
         width: 40px !important;
+        float: left !important;
     }
     .navbar{
         background: #b8a59c;
