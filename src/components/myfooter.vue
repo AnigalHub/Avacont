@@ -2,30 +2,25 @@
     <div class="myfooter">
         <b-container>
             <b-row>
-                <b-col>
-                    <a :href=" link_phone"> {{phone}}</a>
-                </b-col>
-                <b-col>
-                    {{address}}
-                </b-col>
-                <b-col>
-                    <a :href="link_mail">{{mail}}</a>
-                </b-col>
+                <b-col><a :href="'tel:'+ phone"> {{phone}}</a></b-col>
+                <b-col>{{manufacturers_address}}</b-col>
+                <b-col><a :href="'mailto:'+ mail">{{mail}}</a></b-col>
             </b-row>
         </b-container>
     </div>
 </template>
 
 <script>
+    import manufacturers_address from '../../public/documents/manufacturers_address';
+    import phone from '../../public/documents/phone.json';
+    import mail from '../../public/documents/mail.json';
     export default {
         name: "myfooter",
         data(){
             return {
-                phone:'+7 (495) 369-26-73',
-                link_phone:'tel:+74953692673',
-                mail:'avacont@mail.ru',
-                link_mail:'mailto:avacont@mail.ru',
-                address:'Московская область, г. Люберцы, Инициативная ул., дом 34А, объект 3, офис 5.',
+                phone:phone,
+                mail:mail,
+                manufacturers_address: manufacturers_address,
             }
         }
     }
