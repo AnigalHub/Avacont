@@ -61,6 +61,10 @@
         height: 40px !important;
         width: 40px !important;
         float: left !important;
+        border: 1px solid rgba(78, 43, 11, 0.75);
+        box-shadow: 0.1em 0.1em 0.2em #8f745c;
+        margin-right: 4px;
+        border-radius: 7px;
     }
     .navbar{
         background: #b8a59c;
@@ -94,12 +98,6 @@
         color: #4E2B0B;
         text-shadow: 0.05em 0.05em 0.05em #4E2B0B;
         font-weight: 500;
-    }
-    img{
-        border: 1px solid rgba(78, 43, 11, 0.75);
-        box-shadow: 0.1em 0.1em 0.2em #8f745c;
-        margin-right: 4px;
-        border-radius: 7px;
     }
     @media screen and (max-width: 768px) {
         .nav-link {
