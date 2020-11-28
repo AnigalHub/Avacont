@@ -67,8 +67,14 @@
 </script>
 
 <style scoped>
-svg{
-    width: 34px !important;
-    height: 34px !important;
-}
+    svg{
+        width: 34px !important;
+        height: 34px !important;
+    }
+    @media screen and (min-width: 768px)and (max-width: 992px) {
+        svg{
+            width: 28px !important;
+            height: 30px !important;
+        }
+    }
 </style>
