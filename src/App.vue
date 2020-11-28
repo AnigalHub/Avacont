@@ -99,19 +99,26 @@ export default {
     font-family: "Tenor Sans", sans-serif;
     text-shadow: 1.2px 1.2px 1.2px #49240c;
   }
-  .text,.text_light{
+  .text,.text_light,table{
     font-size: 1.35rem;
   }
-  table{
-    font-size: 1.25rem;
-  }
+
   .table{
     text-align: center;
-    border: 2px solid #dee2e6;
+    border: 2px solid rgb(158, 118, 78, 0.55);
   }
   .table th, .table td  {
-    border: 1px solid #dee2e6 !important;
-    padding: 0.1rem !important;
+    border: 1px solid rgb(158, 118, 78, 0.55) !important;
+    padding: 0.5rem !important;
+  }
+  .table th{
+    background: rgb(158, 118, 78, 0.55)  !important;
+  }
+  .table th:hover{
+    background: rgb(158, 118, 78, 0.55)  !important;
+  }
+  .table tr:hover{
+    background: rgba(160, 119, 79, 0.35) !important;
   }
   #feature, #catalog,
   #portfolio,
@@ -144,7 +151,7 @@ export default {
       font-size: 0.9rem !important;
       line-height: 0.7rem !important;
     }
-    .text,.text_light{
+    .text,.text_light,table{
       font-size: 0.9rem;
     }
   }
@@ -163,7 +170,7 @@ export default {
     h4{
       font-size: 1.1rem !important;
     }
-    .text,.text_light{
+    .text,.text_light,table{
       font-size: 1rem;
     }
   }
@@ -178,9 +185,9 @@ export default {
       font-size: 1.25rem !important;
     }
     h4{
-      font-size: 1.2rem !important;
+      font-size: 1.1rem !important;
     }
-    .text,.text_light{
+    .text,.text_light,table{
       font-size: 1rem;
     }
   }
@@ -197,7 +204,7 @@ export default {
     h4{
       font-size: 1.3rem !important;
     }
-    .text,.text_light{
+    .text,.text_light,table{
       font-size: 1.2rem;
     }
   }
