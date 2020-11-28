@@ -102,6 +102,17 @@ export default {
   .text,.text_light{
     font-size: 1.35rem;
   }
+  table{
+    font-size: 1.25rem;
+  }
+  .table{
+    text-align: center;
+    border: 2px solid #dee2e6;
+  }
+  .table th, .table td  {
+    border: 1px solid #dee2e6 !important;
+    padding: 0.1rem !important;
+  }
   #feature, #catalog,
   #portfolio,
   #contact{
