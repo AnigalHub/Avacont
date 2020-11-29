@@ -102,7 +102,6 @@ export default {
   .text,.text_light,table{
     font-size: 1.35rem;
   }
-
   .table{
     text-align: center;
     border: 2px solid rgb(158, 118, 78, 0.55);
@@ -110,6 +109,8 @@ export default {
   .table th, .table td  {
     border: 1px solid rgb(158, 118, 78, 0.55) !important;
     padding: 0.5rem !important;
+    display: table-cell;
+    vertical-align: middle !important;
   }
   .table th{
     background: rgb(158, 118, 78, 0.55)  !important;
@@ -120,9 +121,7 @@ export default {
   .table tr:hover{
     background: rgba(160, 119, 79, 0.35) !important;
   }
-  #feature, #catalog,
-  #portfolio,
-  #contact{
+  #feature, #catalog, #portfolio, #contact{
     padding: 1.8% 0;
   }
   #delivery h2{
@@ -136,23 +135,26 @@ export default {
     padding: 1.5% 0;
   }
   @media screen and (max-width: 500px) {
-    h1{
+    h1 {
       font-size: 1.5rem !important;
       text-align: center;
       padding-bottom: 0.5%;
     }
-    h2,.h2_light{
+    h2, .h2_light {
       font-size: 1.25rem !important;
     }
-    h3{
+    h3 {
       font-size: 1rem !important;
     }
-    h4{
-      font-size: 0.9rem !important;
-      line-height: 0.7rem !important;
+    h4, h5 {
+      font-size: 0.8rem !important;
+      line-height: 0.95rem !important;
     }
-    .text,.text_light,table{
+    .text, .text_light, table {
       font-size: 0.9rem;
+    }
+    .table th, .table td {
+      padding: 0.2rem !important;
     }
   }
   @media screen and (min-width: 500px)and (max-width: 768px) {
@@ -167,8 +169,9 @@ export default {
     h3{
       font-size: 1.2rem !important;
     }
-    h4{
-      font-size: 1.1rem !important;
+    h4,h5{
+      font-size: 1rem !important;
+      line-height: 1rem !important;
     }
     .text,.text_light,table{
       font-size: 1rem;
@@ -184,8 +187,9 @@ export default {
     h3{
       font-size: 1.25rem !important;
     }
-    h4{
-      font-size: 1.1rem !important;
+    h4,h5{
+      font-size: 1.05rem !important;
+      line-height: 1rem !important;
     }
     .text,.text_light,table{
       font-size: 1rem;
@@ -201,7 +205,7 @@ export default {
     h3{
       font-size: 1.4rem !important;
     }
-    h4{
+    h4,h5{
       font-size: 1.3rem !important;
     }
     .text,.text_light,table{
