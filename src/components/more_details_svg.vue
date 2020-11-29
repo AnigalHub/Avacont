@@ -70,11 +70,27 @@
     svg{
         width: 34px !important;
         height: 34px !important;
+        margin-top: 3%;
     }
     @media screen and (min-width: 768px)and (max-width: 992px) {
         svg{
-            width: 28px !important;
+            width: 30px !important;
             height: 30px !important;
+            margin-top: 6%;
+        }
+    }
+    @media screen and (min-width: 500px)and (max-width: 768px) {
+        svg{
+            width: 25px !important;
+            height: 30px !important;
+            margin-top: 8%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        svg{
+            width: 22px !important;
+            height: 30px !important;
+            margin-top: 8.5%;
         }
     }
 </style>
