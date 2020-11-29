@@ -3,9 +3,7 @@
         <div class="background">
             <b-container>
                 <b-row>
-                    <b-col>
-						<Map></Map>
-                    </b-col>
+                    <b-col><Map></Map></b-col>
                     <b-col>
                         <h2 class="h2_light">Доставка</h2>
                         <div class="text_light">
@@ -40,7 +38,6 @@
         }
     }
     @media screen and (max-width: 768px) {
-
         .text_light{
             line-height: 1.4rem;
         }
@@ -48,10 +45,11 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            max-width: 65% ;
+            max-width: 65%;
         }
         svg{
-            margin-top: -13%;
+            margin-top: -15%;
+            padding-bottom: 5%;
         }
         .row{
             flex-direction: column-reverse;
