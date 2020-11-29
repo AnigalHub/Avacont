@@ -5,9 +5,9 @@
             <h3>Накладки с открытой установкой</h3>
             <div class="flex-container">
                 <div v-for="(pad,index) in Open_mount_pads" :key="index">
-                    <img :src="pad.src" :alt="pad.alt"/>
-                    <h4>{{pad.name_pad}}</h4>
                     <b-button @click="showModal(pad)">
+                        <img :src="pad.src" :alt="pad.alt"/>
+                        <h4>{{pad.name_pad}}</h4>
                         <component :is="pad.svg"/>
                     </b-button>
                 </div>
@@ -15,9 +15,9 @@
             <h3>Накладки со скрытой установкой</h3>
             <div class="flex-container">
                 <div v-for="(pad,index) in  Flush_mounted_overlays" :key="index">
-                    <img :src="pad.src" :alt="pad.alt"/>
-                    <h4>{{pad.name_pad}}</h4>
                     <b-button @click="showModal(pad)">
+                        <img :src="pad.src" :alt="pad.alt"/>
+                        <h4>{{pad.name_pad}}</h4>
                         <component :is="pad.svg"/>
                     </b-button>
                 </div>
@@ -141,7 +141,6 @@
         filter: brightness(85%);
         padding: 0.5rem 1rem !important;
         text-decoration: underline;
-
     }
     .modal-title {
         font-weight: 800 !important;
@@ -149,6 +148,11 @@
     }
     .modal-body{
         background: rgba(255, 244, 235, 0.55);
+    }
+    @media screen and (max-width: 500px) {
+        .modal-header .close {
+            padding: 0.5rem 0.5rem !important;
+        }
     }
 </style>
 <style scoped lang="scss">
@@ -190,7 +194,6 @@
     }
     h4{
         margin-bottom: 0 !important;
-        float: left;
         line-height: 1.5rem;
         width: 80%;
         color: black !important;
@@ -198,32 +201,31 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-top:2px solid #7c644c;
-        background: rgba(255, 244, 235, 0.55);
-        font-family: 'Viaoda Libre', cursive;
-        padding: 2% 0;
-        font-weight: 600;
-        box-shadow: 2px 5px 5px #977f65;
+        padding: 2% 1%;
+        border-right:1.5px solid #7c644c;
     }
-
-    .btn{
+    .btn,h4{
         font-family: 'Viaoda Libre', cursive;
         float: left;
-        font-weight: 800;
-        border:2px solid #977f65 ;
-        width: 20%;
-        height: 3.55rem !important;
-        background: rgba(255, 244, 235, 0.55);
+        font-weight: 600;
+    }
+    .btn{
+        background: rgba(255, 244, 235, 0.85);
         box-shadow: 2px 5px 5px #977f65;
+        width: 100%;
         padding: 0 !important;
     }
-    .btn:hover, .btn:focus{
-        background: rgb(124, 100, 76,0.45) !important;
+    .btn:hover{
+        background: rgba(205, 147, 101, 0.15) !important;
+        box-shadow: 2px 5px 5px #504436;
         border: none !important;
     }
-    img,h4{
+    .btn:focus{
+        background: rgba(199, 142, 96, 0.25) !important;
+    }
+
+    img,.btn{
         box-shadow: 2px 5px 5px #977f65;
-        background: rgba(255, 244, 235, 0.55);
     }
     img{
         filter: contrast(115%) brightness(100%);
@@ -237,9 +239,32 @@
         h4{
             width: 84%;
         }
-
-        .btn{
-            width: 16%;
+    }
+    @media screen and (min-width: 500px)and (max-width: 768px) {
+        .flex-container > div {
+            width: 31.5%;
+            margin: 0 0.8% 2% 0.8% !important;
+        }
+        h4{
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .flex-container > div {
+            width: 47%;
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 5% !important;
+        }
+        .flex-container > div:nth-child(4) {
+            margin-left: auto !important;
+        }
+        h4{
+            width: 80%;
+        }
+        .col{
+            padding-right: 0 !important;
         }
     }
 </style>
