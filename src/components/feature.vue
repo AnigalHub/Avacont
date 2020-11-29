@@ -161,6 +161,7 @@
         }
         .part{
             flex-direction: column;
+            padding-bottom: 2%;
             .col,.col-2,.col-4{
                 max-width: 100% !important;
             }
@@ -173,7 +174,6 @@
                 display: block;
                 margin-left: auto !important;
                 margin-right: auto !important;
-
         }
         img {
             width: 90% !important;
