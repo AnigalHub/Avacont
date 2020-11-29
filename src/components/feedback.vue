@@ -99,7 +99,7 @@
             background: rgba(255, 255, 255, 0.88);
         }
         form{
-            padding: 0 10%;
+            padding: 0;
         }
         label {
             margin-bottom: 0.25rem !important;
