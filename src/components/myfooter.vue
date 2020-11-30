@@ -2,25 +2,21 @@
     <div class="myfooter">
         <b-container>
             <b-row>
-                <b-col><a :href="'tel:'+ phone"> {{phone}}</a></b-col>
-                <b-col>{{manufacturers_address}}</b-col>
-                <b-col><a :href="'mailto:'+ mail">{{mail}}</a></b-col>
+                <b-col><a :href="'tel:'+ address.phone"> {{address.phone}}</a></b-col>
+                <b-col>{{address.manufacturers_address}}</b-col>
+                <b-col><a :href="'mailto:'+ address.mail">{{address.mail}}</a></b-col>
             </b-row>
         </b-container>
     </div>
 </template>
 
 <script>
-    import manufacturers_address from '../../public/documents/manufacturers_address';
-    import phone from '../../public/documents/phone.json';
-    import mail from '../../public/documents/mail.json';
+    import address from '../../public/documents/address.json';
     export default {
         name: "myfooter",
         data(){
             return {
-                phone:phone,
-                mail:mail,
-                manufacturers_address: manufacturers_address,
+                address:address,
             }
         }
     }
