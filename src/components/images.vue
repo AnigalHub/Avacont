@@ -46,6 +46,6 @@
     }
     img{
        filter: brightness(55%);
-        min-height: 75px;
+        min-height: 65px;
     }
 </style>
