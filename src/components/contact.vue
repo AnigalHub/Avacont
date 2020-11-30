@@ -6,25 +6,25 @@
                 <b-col cols="5">
                     <div class="address text">
                         <div class="telephone">
-                            <u> Телефон: </u><a :href="'tel:'+ phone"> {{phone}}</a>
+                            <u> Телефон: </u><a :href="'tel:'+ address.phone"> {{address.phone}}</a>
                         </div>
                         <div class="mail">
-                            <u>E-mail:</u><a :href="'mailto:'+ mail">{{mail}}</a>
+                            <u>E-mail:</u><a :href="'mailto:'+ address.mail">{{address.mail}}</a>
                         </div>
                         <div>
-                            <u>Часы работы: </u><br>{{working_hours}}
+                            <u>Часы работы: </u><br>{{address.working_hours}}
                         </div>
                         <div>
-                            <u> Адрес производства: </u><br>{{manufacturers_address}}
+                            <u> Адрес производства: </u><br>{{address.manufacturers_address}}
                         </div>
                         <div>
-                            <u> Адрес офиса продаж: </u><br>{{sales_office_address}}
+                            <u> Адрес офиса продаж: </u><br>{{address.sales_office_address}}
                         </div>
                     </div>
                 </b-col>
                 <b-col>
                     <div class="feature map" id="map-wrap">
-                        <iframe :src="map" ></iframe>
+                        <iframe :src="address.map" ></iframe>
                     </div>
                 </b-col>
             </b-row>
@@ -33,22 +33,12 @@
 </template>
 
 <script>
-    import manufacturers_address from '../../public/documents/manufacturers_address';
-    import sales_office_address from '../../public/documents/sales_office_address.json';
-    import phone from '../../public/documents/phone.json';
-    import working_hours from '../../public/documents/working_hours.json';
-    import mail from '../../public/documents/mail.json';
-    import map from '../../public/documents/map.json';
+    import address from '../../public/documents/address.json';
     export default {
         name: "contact",
         data(){
             return {
-                manufacturers_address: manufacturers_address,
-                sales_office_address:sales_office_address,
-                phone:phone,
-                working_hours:working_hours,
-                mail:mail,
-                map:map,
+                address:address,
             }
         }
     }
