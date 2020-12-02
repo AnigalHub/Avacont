@@ -31,7 +31,13 @@
                         <h3>{{selectedPad.name_pad}}</h3>
                     </b-col>
                 </b-row>
-                <b-table hover :items="selectedPad.table"></b-table>
+                <b-table hover :items="selectedPad.table" :fields="fields">
+                    <template v-slot:cell(Сосна)="row">
+                        {{row}}
+                        {{Open_mount_pads[row.index]}}
+                        {{calcFormula()}}
+                    </template>
+                </b-table>
             </b-modal>
         </b-container>
     </div>
@@ -39,12 +45,18 @@
 
 <script>
     import DetailsSVG from './more_details_svg';
-    import UnderTheRadiator from '../../public/documents/price/under_the_radiator.json';
+    import UnderTheRadiator from '../../public/documents/price.json';
     export default {
         components: {DetailsSVG},
         name: "catalog",
         data(){
             return{
+                fields: [
+                    "Диаметр бревна",
+                    "Сосна",
+                    "Ясень",
+                    "Бук/Дуб"
+                ],
                 selectedPad:{
                     name:"",
                     src:"",
@@ -60,7 +72,7 @@
                         alt:"Накладка_глухая_под_радиатор",
                         name_pad:"Накладка глухая под радиатор",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                     {
                         name:"Накладки с открытой установкой",
@@ -68,7 +80,7 @@
                         alt:"Накладка_глухая_одинарная_на_бревно",
                         name_pad:"Накладка глухая одинарная на бревно",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                     {
                         name:"Накладки с открытой установкой",
@@ -76,7 +88,7 @@
                         alt:"Накладка_глухая_тройная_на_бревно",
                         name_pad:"Накладка глухая тройная на бревно",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                 ],
                 Flush_mounted_overlays:[
@@ -86,7 +98,7 @@
                         alt:"Накладка_на_розетку",
                         name_pad:"Накладка на розетку",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                     {
                         name:"Накладки со скрытой установкой",
@@ -94,7 +106,7 @@
                         alt:"Накладка_на_выключатель_одинарная",
                         name_pad:"Накладка на выключатель одинарная",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                     {
                         name:"Накладки со скрытой установкой",
@@ -102,7 +114,7 @@
                         alt:"Двойная_накладка",
                         name_pad:"Двойная накладка",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                     {
                         name:"Накладки со скрытой установкой",
@@ -110,7 +122,7 @@
                         alt:"Двойная (увеличенная) накладка",
                         name_pad:"Двойная (увеличенная) накладка",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                     {
                         name:"Накладки со скрытой установкой",
@@ -118,7 +130,7 @@
                         alt:"Тройная накладка",
                         name_pad:"Тройная накладка",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator,
+                        table:UnderTheRadiator.data,
                     },
                 ],
             }
@@ -127,6 +139,9 @@
             showModal(pad) {
                 this.selectedPad = pad;
                 this.$refs['my-modal'].show()
+            },
+            calcFormula(){
+                return "calculated"
             }
         }
     }
@@ -223,14 +238,12 @@
     .btn:focus{
         background: rgba(199, 142, 96, 0.25) !important;
     }
-
     img,.btn{
         box-shadow: 2px 5px 5px #977f65;
     }
     img{
         filter: contrast(115%) brightness(100%);
     }
-
     @media screen and (min-width: 768px)and (max-width: 992px) {
         .flex-container > div {
             width: 31%;
