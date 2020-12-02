@@ -32,10 +32,17 @@
                     </b-col>
                 </b-row>
                 <b-table hover :items="selectedPad.table" :fields="fields">
-                    <template v-slot:cell(Сосна)="row">
-                        {{row}}
-                        {{Open_mount_pads[row.index]}}
-                        {{calcFormula()}}
+                    <template v-slot:cell(diameter)="{item}">
+                        {{item.diameter}} мм
+                    </template>
+                    <template v-slot:cell(pine)="{item}">
+                        {{calcFormula(item.diameter)}} руб.
+                    </template>
+                    <template v-slot:cell(ash)="{item}">
+                        {{calcFormula(item.diameter)}} руб.
+                    </template>
+                    <template v-slot:cell(oak)="{item}">
+                        {{calcFormula(item.diameter)}} руб.
                     </template>
                 </b-table>
             </b-modal>
@@ -52,12 +59,14 @@
         data(){
             return{
                 fields: [
-                    "Диаметр бревна",
-                    "Сосна",
-                    "Ясень",
-                    "Бук/Дуб"
+                    { label: "Диаметр бревна", key: "diameter" },
+                    { label: "Сосна", key: "pine" },
+                    { label: "Ясень", key: "ash" },
+                    { label: "Бук/Дуб", key: "oak" }
                 ],
                 selectedPad:{
+                    bonus:0,
+                    price:0,
                     name:"",
                     src:"",
                     alt:"",
@@ -65,8 +74,15 @@
                     svg:'',
                     table:'',
                 },
+                type: {
+                   pine:0.7,
+                   ash: 1.5,
+                   oak: 1
+                },
                 Open_mount_pads:[
                     {
+                        bonus:0,
+                        price:400,
                         name:"Накладки с открытой установкой",
                         src:"./images/catalog/under_the_radiator.jpg",
                         alt:"Накладка_глухая_под_радиатор",
@@ -75,6 +91,8 @@
                         table:UnderTheRadiator.data,
                     },
                     {
+                        bonus:0,
+                        price:300,
                         name:"Накладки с открытой установкой",
                         src:"./images/catalog/single_on_log.jpg",
                         alt:"Накладка_глухая_одинарная_на_бревно",
@@ -83,6 +101,8 @@
                         table:UnderTheRadiator.data,
                     },
                     {
+                        bonus:0,
+                        price:750,
                         name:"Накладки с открытой установкой",
                         src:"./images/catalog/triple_on_log.jpg",
                         alt:"Накладка_глухая_тройная_на_бревно",
@@ -93,6 +113,8 @@
                 ],
                 Flush_mounted_overlays:[
                     {
+                        bonus:0,
+                        price:350,
                         name:"Накладки со скрытой установкой",
                         src:"./images/catalog/to_the_outlet.jpg",
                         alt:"Накладка_на_розетку",
@@ -101,6 +123,8 @@
                         table:UnderTheRadiator.data,
                     },
                     {
+                        bonus:0,
+                        price:350,
                         name:"Накладки со скрытой установкой",
                         src:"./images/catalog/on_switch.jpg",
                         alt:"Накладка_на_выключатель_одинарная",
@@ -109,6 +133,8 @@
                         table:UnderTheRadiator.data,
                     },
                     {
+                        bonus:0,
+                        price:600,
                         name:"Накладки со скрытой установкой",
                         src:"./images/catalog/double.jpg",
                         alt:"Двойная_накладка",
@@ -117,6 +143,8 @@
                         table:UnderTheRadiator.data,
                     },
                     {
+                        bonus:0.1,
+                        price:600,
                         name:"Накладки со скрытой установкой",
                         src:"./images/catalog/double_enlarged.jpg",
                         alt:"Двойная (увеличенная) накладка",
@@ -125,6 +153,8 @@
                         table:UnderTheRadiator.data,
                     },
                     {
+                        bonus:0,
+                        price:800,
                         name:"Накладки со скрытой установкой",
                         src:"./images/catalog/triple.jpg",
                         alt:"Тройная накладка",
@@ -135,13 +165,14 @@
                 ],
             }
         },
+
         methods: {
             showModal(pad) {
                 this.selectedPad = pad;
                 this.$refs['my-modal'].show()
             },
-            calcFormula(){
-                return "calculated"
+            calcFormula(diameter){
+                return ((this.selectedPad.price * this.type.pine * diameter)/ 200)+(((this.selectedPad.price * this.type.pine * diameter)/ 200) * this.selectedPad.bonus)
             }
         }
     }
