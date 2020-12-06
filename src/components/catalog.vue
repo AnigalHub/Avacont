@@ -52,7 +52,7 @@
 
 <script>
     import DetailsSVG from './more_details_svg';
-    import UnderTheRadiator from '../../public/documents/price.json';
+    import Price from '../../public/documents/price.json';
     export default {
         components: {DetailsSVG},
         name: "catalog",
@@ -88,7 +88,7 @@
                         alt:"Накладка_глухая_под_радиатор",
                         name_pad:"Накладка глухая под радиатор",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                     {
                         bonus:0,
@@ -98,7 +98,7 @@
                         alt:"Накладка_глухая_одинарная_на_бревно",
                         name_pad:"Накладка глухая одинарная на бревно",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                     {
                         bonus:0,
@@ -108,7 +108,7 @@
                         alt:"Накладка_глухая_тройная_на_бревно",
                         name_pad:"Накладка глухая тройная на бревно",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                 ],
                 Flush_mounted_overlays:[
@@ -120,7 +120,7 @@
                         alt:"Накладка_на_розетку",
                         name_pad:"Накладка на розетку",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                     {
                         bonus:0,
@@ -130,7 +130,7 @@
                         alt:"Накладка_на_выключатель_одинарная",
                         name_pad:"Накладка на выключатель одинарная",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                     {
                         bonus:0,
@@ -140,7 +140,7 @@
                         alt:"Двойная_накладка",
                         name_pad:"Двойная накладка",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                     {
                         bonus:0.1,
@@ -150,7 +150,7 @@
                         alt:"Двойная (увеличенная) накладка",
                         name_pad:"Двойная (увеличенная) накладка",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                     {
                         bonus:0,
@@ -160,7 +160,7 @@
                         alt:"Тройная накладка",
                         name_pad:"Тройная накладка",
                         svg:DetailsSVG,
-                        table:UnderTheRadiator.data,
+                        table:Price.data,
                     },
                 ],
             }
@@ -225,6 +225,7 @@
             align-items: center;
         }
     }
+
     h2{
         padding-bottom: 0.2% !important;
     }
