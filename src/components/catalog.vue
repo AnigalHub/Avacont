@@ -36,13 +36,13 @@
                         {{item.diameter}} мм
                     </template>
                     <template v-slot:cell(pine)="{item}">
-                        {{calcFormula(item.diameter)}} руб.
+                        {{calcFormula(item.diameter, type.pine)}} руб.
                     </template>
                     <template v-slot:cell(ash)="{item}">
-                        {{calcFormula(item.diameter)}} руб.
+                        {{calcFormula(item.diameter, type.ash)}} руб.
                     </template>
                     <template v-slot:cell(oak)="{item}">
-                        {{calcFormula(item.diameter)}} руб.
+                        {{calcFormula(item.diameter, type.oak)}} руб.
                     </template>
                 </b-table>
             </b-modal>
@@ -171,8 +171,8 @@
                 this.selectedPad = pad;
                 this.$refs['my-modal'].show()
             },
-            calcFormula(diameter){
-                return ((this.selectedPad.price * this.type.pine * diameter)/ 200)+(((this.selectedPad.price * this.type.pine * diameter)/ 200) * this.selectedPad.bonus)
+            calcFormula(diameter, type){
+                return (Math.round((this.selectedPad.price * type * diameter)/ 200)+(((this.selectedPad.price * type * diameter)/ 200) * this.selectedPad.bonus))
             }
         }
     }
