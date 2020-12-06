@@ -115,10 +115,8 @@ export default {
   .table th{
     background: rgb(158, 118, 78, 0.55)  !important;
   }
-  .table th:hover{
-    background: rgb(158, 118, 78, 0.55)  !important;
-  }
-  .table tr:hover{
+
+  .table tr:not(:first-child):hover {
     background: rgba(160, 119, 79, 0.35) !important;
   }
   #feature, #catalog, #portfolio, #contact{
