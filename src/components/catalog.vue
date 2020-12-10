@@ -4,6 +4,15 @@
             <h2>Накладки</h2>
             <h3>Накладки с открытой установкой</h3>
             <div class="flex-container">
+                <div v-for="(pad,index) in price.Open_mount_pads" :key="index">
+                    <b-button @click="showModal(pad)">
+                        <img :src="pad.src" :alt="pad.alt"/>
+                        <h4>{{pad.name_pad}}</h4>
+                        <component :is="pad.svg"/>
+                    </b-button>
+                </div>
+            </div>
+            <div class="flex-container">
                 <div v-for="(pad,index) in Open_mount_pads" :key="index">
                     <b-button @click="showModal(pad)">
                         <img :src="pad.src" :alt="pad.alt"/>
@@ -53,11 +62,13 @@
 <script>
     import DetailsSVG from './more_details_svg';
     import Price_table from '../../public/documents/table.json';
+    import price from '../../public/documents/Pads.json';
     export default {
         components: {DetailsSVG},
         name: "catalog",
         data(){
             return{
+                price:price,
                 fields: [
                     { label: "Диаметр бревна", key: "diameter" },
                     { label: "Сосна", key: "pine" },
