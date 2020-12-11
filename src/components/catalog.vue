@@ -12,18 +12,9 @@
                     </b-button>
                 </div>
             </div>
-            <div class="flex-container">
-                <div v-for="(pad,index) in Open_mount_pads" :key="index">
-                    <b-button @click="showModal(pad)">
-                        <img :src="pad.src" :alt="pad.alt"/>
-                        <h4>{{pad.name_pad}}</h4>
-                        <component :is="pad.svg"/>
-                    </b-button>
-                </div>
-            </div>
             <h3>Накладки со скрытой установкой</h3>
             <div class="flex-container">
-                <div v-for="(pad,index) in Flush_mounted_overlays" :key="index">
+                <div v-for="(pad,index) in  price.Flush_mounted_overlays" :key="index">
                     <b-button @click="showModal(pad)">
                         <img :src="pad.src" :alt="pad.alt"/>
                         <h4>{{pad.name_pad}}</h4>
@@ -45,13 +36,13 @@
                         {{item.diameter}} мм
                     </template>
                     <template v-slot:cell(pine)="{item}">
-                        {{calcFormula(item.diameter, type.pine)}} руб.
+                        {{calcFormula(item.diameter, price.type.pine)}} руб.
                     </template>
                     <template v-slot:cell(ash)="{item}">
-                        {{calcFormula(item.diameter, type.ash)}} руб.
+                        {{calcFormula(item.diameter, price.type.ash)}} руб.
                     </template>
                     <template v-slot:cell(oak)="{item}">
-                        {{calcFormula(item.diameter, type.oak)}} руб.
+                        {{calcFormula(item.diameter, price.type.oak)}} руб.
                     </template>
                 </b-table>
             </b-modal>
@@ -61,7 +52,6 @@
 
 <script>
     import DetailsSVG from './more_details_svg';
-    import Price_table from '../../public/documents/table.json';
     import price from '../../public/documents/Pads.json';
     export default {
         components: {DetailsSVG},
@@ -85,95 +75,6 @@
                     svg:'',
                     table:'',
                 },
-                type: {
-                   pine:0.7,
-                   ash: 1.5,
-                   oak: 1
-                },
-                Open_mount_pads:[
-                    {
-                        bonus:0,
-                        price:400,
-                        name:"Накладки с открытой установкой",
-                        src:"./images/catalog/under_the_radiator.jpg",
-                        alt:"Накладка_глухая_под_радиатор",
-                        name_pad:"Накладка глухая под радиатор",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                    {
-                        bonus:0,
-                        price:300,
-                        name:"Накладки с открытой установкой",
-                        src:"./images/catalog/single_on_log.jpg",
-                        alt:"Накладка_глухая_одинарная_на_бревно",
-                        name_pad:"Накладка глухая одинарная на бревно",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                    {
-                        bonus:0,
-                        price:750,
-                        name:"Накладки с открытой установкой",
-                        src:"./images/catalog/triple_on_log.jpg",
-                        alt:"Накладка_глухая_тройная_на_бревно",
-                        name_pad:"Накладка глухая тройная на бревно",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                ],
-                Flush_mounted_overlays:[
-                    {
-                        bonus:0,
-                        price:350,
-                        name:"Накладки со скрытой установкой",
-                        src:"./images/catalog/to_the_outlet.jpg",
-                        alt:"Накладка_на_розетку",
-                        name_pad:"Накладка на розетку",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                    {
-                        bonus:0,
-                        price:350,
-                        name:"Накладки со скрытой установкой",
-                        src:"./images/catalog/on_switch.jpg",
-                        alt:"Накладка_на_выключатель_одинарная",
-                        name_pad:"Накладка на выключатель одинарная",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                    {
-                        bonus:0,
-                        price:600,
-                        name:"Накладки со скрытой установкой",
-                        src:"./images/catalog/double.jpg",
-                        alt:"Двойная_накладка",
-                        name_pad:"Двойная накладка",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                    {
-                        bonus:0.1,
-                        price:600,
-                        name:"Накладки со скрытой установкой",
-                        src:"./images/catalog/double_enlarged.jpg",
-                        alt:"Двойная (увеличенная) накладка",
-                        name_pad:"Двойная (увеличенная) накладка",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                    {
-                        bonus:0,
-                        price:800,
-                        name:"Накладки со скрытой установкой",
-                        src:"./images/catalog/triple.jpg",
-                        alt:"Тройная накладка",
-                        name_pad:"Тройная накладка",
-                        svg:DetailsSVG,
-                        table:Price_table.data,
-                    },
-                ],
             }
         },
 
