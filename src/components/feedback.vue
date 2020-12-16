@@ -27,7 +27,6 @@
 
 <script>
     import axios from 'axios'
-
     export default {
         name: "feedback",
         data(){
@@ -77,11 +76,8 @@
     }
     button{
         display: block;
-        margin-top: 0.5%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0.5% auto 1% auto;
         padding: 0.25% 2%;
-        margin-bottom: 1%;
         font-weight: 600;
         font-family: "Tenor Sans", sans-serif;
         font-size: 1.1rem;
