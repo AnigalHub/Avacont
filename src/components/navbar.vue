@@ -1,5 +1,5 @@
 <template>
-    <b-navbar id="Nav" class="navbar-expand-xl sticky-top " toggleable>
+    <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
         <b-container>
             <b-navbar-brand href=#home @click.prevent="scrollToTop()">
                 <img src="../../public/favicon.jpg"/>
