@@ -87,25 +87,6 @@
     img{
         box-shadow: 2px 5px 5px #7c5639;
     }
-    .row{
-        padding-bottom: 15px;
-    }
-    @media screen and (max-width: 500px) {
-        .row{
-            padding-bottom: 8px;
-        }
-        .col{
-            padding: 0 4px !important;
-        }
-    }
-    @media screen and (min-width: 500px)and (max-width: 768px) {
-        .row{
-            padding-bottom: 10px;
-        }
-        .col{
-            padding: 0 10px !important;
-        }
-    }
 
     @media screen and  (max-width: 768px) {
         .flex-container > img {
