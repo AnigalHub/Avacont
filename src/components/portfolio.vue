@@ -71,10 +71,6 @@
 </script>
 
 <style scoped lang="scss">
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
     .flex-container > img {
         background: radial-gradient(70% 70%, #ffffff, rgb(210, 206, 211));
         width: 22%;

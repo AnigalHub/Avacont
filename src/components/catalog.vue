@@ -119,10 +119,6 @@
         background-size:100% 100%;
         padding-bottom: 2%;
     }
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
     .flex-container > div {
         width: 30%;
         margin: 0 1.5% 2% 1.5% !important;
@@ -137,7 +133,6 @@
             align-items: center;
         }
     }
-
     h2{
         padding-bottom: 0.2% !important;
     }
