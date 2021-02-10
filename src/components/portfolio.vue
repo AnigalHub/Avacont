@@ -3,9 +3,7 @@
         <b-container>
             <h2>Портфолио</h2>
             <div class="flex-container">
-                <div v-for="(work, index) in Portfolio" :key="index">
-                    <img :src="work.src" :alt="work.alt"/>
-                </div>
+                <img v-for="(work, index) in Portfolio" :key="index" :src="work.src" :alt="work.alt"/>
             </div>
         </b-container>
     </div>
@@ -77,7 +75,7 @@
         display: flex;
         flex-wrap: wrap;
     }
-    .flex-container > div {
+    .flex-container > img {
         background: radial-gradient(70% 70%, #ffffff, rgb(210, 206, 211));
         width: 22%;
         margin: 0 1.5% 2.2% 1.5% !important;
@@ -110,7 +108,7 @@
     }
 
     @media screen and  (max-width: 768px) {
-        .flex-container > div {
+        .flex-container > img {
             background: radial-gradient(70% 70%, #ffffff, rgb(210, 206, 211));
             width: 30%;
             margin: 0 1.5% 2.2% 1.5% !important;
