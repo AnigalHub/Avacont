@@ -61,6 +61,10 @@ export default {
       padding-right: 15px !important;
       padding-left: 15px !important;
   }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .row {
     margin: 0 !important;
   }
