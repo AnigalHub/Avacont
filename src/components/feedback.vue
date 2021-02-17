@@ -27,27 +27,28 @@
 
 <script>
     import axios from 'axios'
+    import cfg from './../../public/documents/cfg.json'
     export default {
         name: "feedback",
         data(){
             return {
                 feedback:{
-                    name: "",
-                    phone: "",
-                    email: "",
-                    message: ""
+                    name: '',
+                    phone: '',
+                    email: '',
+                    message: '',
                 }
             }
         },
         methods:{
             SendFeedback(){
-                const url = 'http://127.0.0.1:8000/SendFeedback';
+                const url = `${cfg.feedbackUrl}SendFeedback`;
                 axios.post(url, this.feedback)
                     .then(resp => {
                         alert(resp.data)
                     })
                     .catch(error => {
-                        console.log(error)
+                        alert(error)
                     })
                 //axios.get(url).then(resp => { alert(resp.data)}).catch(error => { console.log(error) })
             }
