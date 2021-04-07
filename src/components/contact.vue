@@ -1,7 +1,8 @@
 <template>
     <div id="contact">
+        <div class="background">
         <b-container>
-            <h2>Контактная информация</h2>
+            <h2 class="h2_light">Контактная информация</h2>
             <b-row>
                 <b-col cols="5">
                     <div class="address text">
@@ -24,11 +25,12 @@
                 </b-col>
                 <b-col>
                     <div class="feature map" id="map-wrap">
-                        <iframe :src="address.map" ></iframe>
+                        <iframe title="адрес_компании" :src="address.map" ></iframe>
                     </div>
                 </b-col>
             </b-row>
         </b-container>
+        </div>
     </div>
 </template>
 
@@ -46,26 +48,31 @@
 
 <style  scoped lang="scss">
     #contact{
-    background: url("../../public/images/background/background_2.jpg") 100% 100% no-repeat;
+    background: url("../../public/images/background/background_5.jpg") 100% 100% no-repeat; //при добавлении заменить на background_2
     background-size:100% 100%;
-    padding-bottom: 2.5%;
+    //padding-bottom: 2.5%;
+    }
+    .background { //при добавлении feedback - удалить
+        background-color: rgba(0, 0, 0, 0.48);
+        padding: 1.5% 0;
     }
     a {
-        text-shadow: 0.5px 0.5px 0.5px #7c644c;
+        text-shadow: 0.025rem 0.025rem 0.025rem #7c644c;
         color: #6a4827;
     }
     a:hover{
-        text-shadow: 0.5px 0.5px 0.5px #7c644c;
+        text-shadow: 0.025rem 0.025rem 0.025rem #7c644c;
         color: #5a3827;
         text-decoration: none !important;
         font-weight: 700;
     }
     .col-5 div{
         padding-bottom: 2%;
+        background: white;
     }
     u{
         font-size: 1.5rem;
-        text-shadow: 0.5px 0.5px 0.5px #7c644c;
+        text-shadow: 0.025rem 0.025rem 0.025rem #7c644c;
         color: #40200b;
         font-weight: 600;
     }
@@ -73,7 +80,7 @@
         padding: 4%;
         background: linear-gradient(to right top,rgba(131, 108, 84, 0.35),rgba(131, 108, 84, 0.15),rgba(131, 108, 84, 0.35));
         border-radius: 8px;
-        box-shadow: 2px 5px 5px #7c5639;
+        //box-shadow: 2px 5px 5px #7c5639;
     }
 
     .feature.map {
