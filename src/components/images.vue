@@ -47,5 +47,8 @@
     img{
        filter: brightness(55%);
         min-height: 65px;
+        min-width: 72px;
+        width: 100%;
+        height: 100%;
     }
 </style>
