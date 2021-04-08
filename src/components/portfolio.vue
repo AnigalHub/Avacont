@@ -74,6 +74,7 @@
     .flex-container > img {
         background: radial-gradient(70% 70%, #ffffff, rgb(210, 206, 211));
         width: 22%;
+        height: 100%;
         margin: 0 1.5% 2.2% 1.5% !important;
     }
     #portfolio{
