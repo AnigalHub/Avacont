@@ -19,22 +19,22 @@
                                 id="carousel-fade" fade indicators>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/home/double_pad.jpg"/>
+                                    <img src="../../public/images/home/double_pad.jpg" alt="двойная_накладка"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/home/log_pad.jpg"/>
+                                    <img src="../../public/images/home/log_pad.jpg" alt="накладка_на_выключатель"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/home/pad_on_switch.jpg"/>
+                                    <img src="../../public/images/home/pad_on_switch.jpg" alt="накладка_на_розетку"/>
                                 </template>
                             </b-carousel-slide>
                             <b-carousel-slide>
                                 <template v-slot:img>
-                                    <img src="../../public/images/home/triple_pad.jpg"/>
+                                    <img src="../../public/images/home/triple_pad.jpg" alt="тройная_накладка"/>
                                 </template>
                             </b-carousel-slide>
                         </b-carousel>
@@ -77,19 +77,24 @@
         background: url("../../public/images/background/background_1.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
     }
+    img{
+        width: 100%;
+        height: 100%;
+    }
     ul{
         padding-top: 4%;
     }
     .text_light{
-        font-weight: 500 !important;
+        font-weight: 400 !important;
+        text-shadow: 1.2px 1.2px 1.2px #5f2c0c !important;
     }
     li{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding-bottom: 5%;
         color: rgba(255, 255, 255, 0.9);
         list-style-image:url("../../public/images/list.png");
-        font-weight: 600;
-        font-family: 'Tenor Sans', sans-serif;
+        font-weight: 400;
+
         text-shadow: 0.5px 0.5px 0.5px #7c5639;
     }
 
