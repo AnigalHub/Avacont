@@ -8,7 +8,7 @@
       <catalog></catalog>
       <delivery></delivery>
       <portfolio></portfolio>
-      <feedback></feedback>
+     <!-- <feedback></feedback> -->
       <contact></contact>
      <myfooter></myfooter>
     </b-container>
@@ -24,7 +24,7 @@ import Images from "./components/images";
 import Catalog from "./components/catalog";
 import Delivery from "./components/delivery";
 import Portfolio from "./components/portfolio";
-import Feedback from "./components/feedback";
+//import Feedback from "./components/feedback";
 import Contact from "./components/contact";
 import Myfooter from "./components/myfooter";
 
@@ -33,7 +33,7 @@ export default {
   components: {
       Myfooter,
       Contact,
-      Feedback,
+     //Feedback,
       Portfolio,
       Delivery,
       Catalog,
@@ -70,37 +70,36 @@ export default {
   }
   h1{
     font-weight: 900;
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: "Playfair Display", serif;
     text-shadow: 2px 2px 2px #572e0c;
     color: #ffffff;
     padding-top: 5%;
     padding-bottom: 2%;
   }
   .h2_light{
-    font-weight: 800;
     text-align: center;
-    font-family: 'Tenor Sans', sans-serif;
     text-shadow: 2px 2px 2px #572e0c;
     color: #ffffff;
     padding: 1% 0;
   }
+  h2,h3{
+    font-family: "Playfair Display", serif;
+  }
   h2{
     font-weight: 800 !important;
     text-align: center;
-    font-family: 'Tenor Sans', sans-serif;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.74);
+    text-shadow: 1px 1px 1px rgb(78, 43, 11,.6);
     color:  #4E2B0B;
     padding: 1% 0;
   }
   .text{
     font-weight: 500;
-    text-shadow: 0.5px 0.5px 0.5px #80674e;
+    text-shadow: 0.5px 0.5px 0.5px #5c4935;
     color: #6a4827;
   }
   .text_light{
     color: rgba(255, 255, 255, 0.85);
     font-weight: 600;
-    font-family: "Tenor Sans", sans-serif;
     text-shadow: 1.2px 1.2px 1.2px #49240c;
   }
   .text,.text_light,table{
@@ -123,7 +122,7 @@ export default {
   .table tr:not(:first-child):hover {
     background: rgba(160, 119, 79, 0.35) !important;
   }
-  #feature, #catalog, #portfolio, #contact{
+  #feature, #catalog, #portfolio{
     padding: 1.8% 0;
   }
   #delivery h2{
@@ -153,7 +152,7 @@ export default {
       line-height: 0.95rem !important;
     }
     .text, .text_light, table {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
     .table th, .table td {
       padding: 0.2rem !important;
@@ -176,7 +175,7 @@ export default {
       line-height: 1rem !important;
     }
     .text,.text_light,table{
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
   @media screen and (min-width: 768px)and (max-width: 992px) {
@@ -194,7 +193,7 @@ export default {
       line-height: 1rem !important;
     }
     .text,.text_light,table{
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
   @media screen and (min-width: 992px)and (max-width: 1200px) {
