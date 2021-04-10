@@ -83,7 +83,7 @@
                         number: "2",
                         number_descr:"Типа стен",
                         number_descr_2:"",
-                        descr: "  Наши изделия предусмотрены для бревенчатых стен и блок-хауса.",
+                        descr: "Наши изделия предусмотрены для бревенчатых стен и блок-хауса.",
                         img:[
                             {
                                 src: "./images/feature/log.jpg",
@@ -101,30 +101,31 @@
     }
 </script>
 <style scoped lang="scss">
-
     #feature{
         background: url("../../public/images/background/background_2.jpg") 100% 100% no-repeat;
         background-size:100% 100%;
         padding-bottom: 5% !important;
     }
-
     .part{
         border-bottom: 2px solid #7e4614;
     }
     .number{
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 4px;
-        font-family: 'Lobster', cursive;
+        font-family: 'Libre Caslon Display', serif;
         font-size: 4.5rem;
         color: #4f2f0d;
         text-shadow: 1px 1px 1px #ffffff;
     }
-
     .row:nth-child(3) .number_descr,.row:nth-child(4) .number_descr{
         line-height: 2rem;
     }
     .size{
         box-shadow: 2px 5px 5px #7c5639;
+    }
+    img{
+        width: 100%;
+        height: 100%;
     }
     .row:nth-child(4) .col-4  img{
         border-radius: 50%;
@@ -136,7 +137,6 @@
         padding-left: 5px !important;
         padding-right: 5px !important;
     }
-
     .col,.col-2,.col-4{
         padding: 1.5% 0.6%;
     }
@@ -145,9 +145,9 @@
         text-align: center;
         font-weight: 700;
         line-height: 3rem !important;
-        font-family: 'Podkova', serif;
+        font-family: 'Playfair Display', serif;
         font-size: 1.5rem;
-        text-shadow: 1px 1px 1px #7c644c;
+        text-shadow: .8px .8px .8px #7c644c;
         color: #4f2f0d;
     }
     @media screen and (max-width: 500px) {
@@ -195,11 +195,11 @@
             max-width: 27% !important;
         }
         .col-2{
-            font-size: 1rem;
+            font-size: 1.1rem;
             line-height: 2.5rem !important;
         }
         .col,.col-2{
-            padding: 1% 0.6%;
+            padding: 1.2% 0.6%;
         }
         .text{
             line-height: 1.3rem;
