@@ -137,19 +137,21 @@
         padding-bottom: 0.2% !important;
     }
     h3{
-        font-family: 'Viaoda Libre', cursive;
         padding: 0.5% 0;
-        font-weight: 800;
         color: #5a330c;
+        font-weight: 800;
+        letter-spacing: -1px;
     }
     h3,h4{
         text-align: center;
-        text-shadow: 0.5px 0.5px 0.5px #7c644c;
     }
     h4{
+        font-weight: 500;
+        text-shadow: 0.5px 0.5px 0.5px #7c644c;
         margin-bottom: 0 !important;
         line-height: 1.5rem;
         width: 80%;
+        font-size: 1.4rem;
         color: black !important;
         height: 3.48rem !important;
         display: flex;
@@ -159,9 +161,8 @@
         border-right:1.5px solid #7c644c;
     }
     .btn,h4{
-        font-family: 'Viaoda Libre', cursive;
+        font-family: "Playfair Display", serif;
         float: left;
-        font-weight: 600;
     }
     .btn{
         background: rgba(255, 244, 235, 0.85);
@@ -182,6 +183,8 @@
     }
     img{
         filter: contrast(115%) brightness(100%);
+        width: 100%;
+        height: 100%;
     }
     @media screen and (min-width: 768px)and (max-width: 992px) {
         .flex-container > div {
