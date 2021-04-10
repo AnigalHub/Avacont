@@ -2,7 +2,7 @@
     <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
         <b-container>
             <b-navbar-brand href=#home @click.prevent="scrollToTop()">
-                <img src="../../public/favicon.jpg"/>
+                <img src="../../public/favicon.jpg" alt="логотип_компании"/>
                 <div class="name_company">АВАКОНТ</div>
                 <div class="description_name">производственная компания</div>
             </b-navbar-brand>
@@ -77,8 +77,8 @@
         padding-right: 1rem !important;
         padding-left: 1rem !important;
         font-weight: 600;
-        font-size: 1.15rem !important;
-        font-family: 'Tenor Sans', sans-serif;
+        font-size: 1.3rem !important;
+
     }
     .nav-link:hover{
         font-weight: 700;
@@ -88,16 +88,17 @@
     .name_company{
         font-size: 1.4rem;
         color: #4E2B0B;
-        font-weight: 700;
-        letter-spacing: 7px;
-        font-family: 'Caveat', cursive;
+        font-weight: 500;
+        font-style: italic;
+        letter-spacing: 4px;
+        font-family: "Caveat", cursive;
     }
     .description_name{
-        font-size: 0.63rem;
+        font-size: 0.65rem;
         margin-top: -6%;
         color: #4E2B0B;
-        text-shadow: 0.05em 0.05em 0.05em #4E2B0B;
-        font-weight: 500;
+        font-weight: 600;
+        text-shadow: 0.025rem 0.025rem 0.025rem #4e2b0b;
     }
     @media screen and (max-width: 768px) {
         .nav-link {
