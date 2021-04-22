@@ -1,5 +1,5 @@
 <template>
-    <div id="delivery">
+    <div id="Delivery">
         <div class="background">
             <b-container>
                 <b-row>
@@ -27,33 +27,5 @@
 </script>
 
 <style scoped lang="scss">
-    #delivery{
-        background: url("../../public/images/background/background_4.jpg") 100% 100% no-repeat;
-        background-size:100% 100%;
-    }
-
-    @media screen and (max-width: 500px) {
-        .text_light{
-            line-height: 1.2rem;
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .text_light{
-            line-height: 1.4rem;
-        }
-        .col:first-child{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 65%;
-        }
-        svg{
-            margin-top: -15%;
-            padding-bottom: 5%;
-        }
-        .row{
-            flex-direction: column-reverse;
-        }
-    }
 
 </style>

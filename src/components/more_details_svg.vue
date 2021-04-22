@@ -1,5 +1,5 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172" style=" fill:#000000;">
+    <svg id="more_details_svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172" style=" fill:#000000;">
         <defs>
             <linearGradient x1="61.8125" y1="59.125" x2="61.8125" y2="75.25" gradientUnits="userSpaceOnUse" id="color-1_43586_gr1">
                 <stop offset="0" stop-color="#796161"></stop>
@@ -67,30 +67,5 @@
 </script>
 
 <style scoped>
-    svg{
-        width: 34px !important;
-        height: 34px !important;
-        margin-top: 3%;
-    }
-    @media screen and (min-width: 768px)and (max-width: 992px) {
-        svg{
-            width: 30px !important;
-            height: 30px !important;
-            margin-top: 6%;
-        }
-    }
-    @media screen and (min-width: 500px)and (max-width: 768px) {
-        svg{
-            width: 25px !important;
-            height: 30px !important;
-            margin-top: 8%;
-        }
-    }
-    @media screen and (max-width: 500px) {
-        svg{
-            width: 22px !important;
-            height: 30px !important;
-            margin-top: 8.5%;
-        }
-    }
+
 </style>

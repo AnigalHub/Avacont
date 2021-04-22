@@ -1,5 +1,5 @@
 <template>
-    <div id="Feature">
+    <div id="Features">
         <b-container>
             <h2>Характеристики изделий</h2>
             <b-row class="part" v-for="(catalog, index) in catalog" :key="index">
@@ -23,7 +23,7 @@
 
 <script>
     export default {
-        name: "feature",
+        name: "features",
         data(){
             return{
                 catalog:[
