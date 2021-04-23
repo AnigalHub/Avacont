@@ -112,7 +112,8 @@ export default {
     padding-top: 5%;
     padding-bottom: 2%;
   }
-  .h2_light{ /*светлый заголовок (когда фон темный)*/
+  /*светлый заголовок (когда фон темный)*/
+  .h2_light{
     text-align: center;
     text-shadow: 2px 2px 2px #572e0c;
     color: #ffffff;
@@ -164,7 +165,8 @@ export default {
   /*модальное окно (в компоненте "Каталог")*/
   .modal .row{
     padding-bottom: 2% !important;
-    .col{ /*параметры сетки бутстрап (название накладки)*/
+    /*параметры сетки бутстрап (название накладки)*/
+    .col{
       display: flex;
       align-items: center;
     }
@@ -173,13 +175,17 @@ export default {
   #Home{
     background: url("../public/images/background/background_1.jpg") 100% 100% no-repeat;
     background-size:100% 100%;
-    #background{ background-color: rgba(0, 0, 0, 0.2);}/*затемнение компонента*/
-    .text_light{ /*текст на темном фоне компонента*/
+    /*затемнение компонента*/
+    #background{ background-color: rgba(0, 0, 0, 0.2);}
+    /*текст на темном фоне компонента*/
+    .text_light{
       font-weight: 400 !important;
       text-shadow: 1.2px 1.2px 1.2px #5f2c0c !important;
     }
-    ul{padding-top: 4%;} /*список*/
-    .col:first-child li{ /*элементы списка*/
+    /*список*/
+    ul{padding-top: 4%;}
+    /*элементы списка*/
+    .col:first-child li{
       font-size: 1.4rem;
       padding-bottom: 5%;
       color: rgba(255, 255, 255, 0.9);
@@ -193,8 +199,10 @@ export default {
     background: url("../public/images/background/background_2.jpg") 100% 100% no-repeat;
     background-size:100% 100%;
     padding-bottom: 5% !important;
-    .part{border-bottom: 2px solid #7e4614;} /*блок с одной характеристикой (цифра, текст, картинки)*/
-    .number{ /*цифры*/
+    /*блок с одной характеристикой (цифра, текст, картинки)*/
+    .part{border-bottom: 2px solid #7e4614;}
+    /*цифры*/
+    .number{
       font-weight: 600;
       letter-spacing: 4px;
       font-family: 'Libre Caslon Display', serif;
@@ -202,11 +210,16 @@ export default {
       color: #4f2f0d;
       text-shadow: 1px 1px 1px #ffffff;
     }
-    .row:nth-child(3) .number_descr,.row:nth-child(4) .number_descr{line-height: 2rem;} /*фраза над цифрой*/
-    .row:nth-child(4) .col-4  img{border-radius: 50%;}  /*картинки*/
-    .row:nth-child(4) .col-4  img,.row:nth-child(5) .col-4 img{box-shadow: 2px 5px 5px #7c5639;} /*картинки*/
-    .col,.col-2,.col-4{padding: 1.5% 0.6%;} /*параметры сетки бутстрап (цифры, текст, картинки)*/
-    .col-2{/*параметры сетки бутстрап (блок с названием и цифрой)*/
+    /*фраза над цифрой*/
+    .row:nth-child(3) .number_descr,.row:nth-child(4) .number_descr{line-height: 2rem;}
+    /*картинки*/
+    .row:nth-child(4) .col-4  img{border-radius: 50%;}
+    /*картинки*/
+    .row:nth-child(4) .col-4  img,.row:nth-child(5) .col-4 img{box-shadow: 2px 5px 5px #7c5639;}
+    /*параметры сетки бутстрап (цифры, текст, картинки)*/
+    .col,.col-2,.col-4{padding: 1.5% 0.6%;}
+    /*параметры сетки бутстрап (блок с названием и цифрой)*/
+    .col-2{
       border-bottom: 2px solid #7e4614;
       text-align: center;
       font-weight: 700;
@@ -219,8 +232,10 @@ export default {
   }
   /*Компонент "5 картинок"*/
   #Images{
-    .col{padding: 0 !important;} /*параметры сетки бутстрап (блоки под картинки)*/
-    img{ /*картинки*/
+    /*параметры сетки бутстрап (блоки под картинки)*/
+    .col{padding: 0 !important;}
+    /*картинки*/
+    img{
       filter: brightness(55%);
       min-height: 65px;
       min-width: 72px;
@@ -242,6 +257,7 @@ export default {
       letter-spacing: -1px;
     }
     h3,h4{text-align: center;}
+    /*название накладок*/
     h4{
       font-weight: 500;
       text-shadow: 0.5px 0.5px 0.5px #7c644c;
@@ -256,31 +272,39 @@ export default {
       justify-content: center;
       padding: 2% 1%;
       border-right:1.5px solid #7c644c;
-    } /*название накладок*/
-    .btn,h4{   /*кнопки и заголовки*/
+    }
+    /*кнопки и заголовки*/
+    .btn,h4{
       font-family: "Playfair Display", serif;
       float: left;
     }
-    .btn{  /*кнопки*/
+    /*кнопки*/
+    .btn{
       background: rgba(255, 244, 235, 0.85);
       box-shadow: 2px 5px 5px #977f65;
       width: 100%;
       padding: 0 !important;
-      &:hover { /*при наведении*/
+      /*при наведении*/
+      &:hover {
         background: rgba(205, 147, 101, 0.15) !important;
         box-shadow: 2px 5px 5px #504436;
         border: none !important;
       }
-      &:focus{background: rgba(199, 142, 96, 0.25) !important;} /*в фокусе*/
+      /*в фокусе*/
+      &:focus{background: rgba(199, 142, 96, 0.25) !important;}
     }
-    #more_details_svg{ /*svg в кнопке - (подробнее (вызов модального окна))*/
+    /*svg в кнопке - (подробнее (вызов модального окна))*/
+    #more_details_svg{
       width: 34px !important;
       height: 34px !important;
       margin-top: 3%;
     }
-    img,.btn{box-shadow: 2px 5px 5px #977f65;} /*картинки и кнопки*/
-    img{filter: contrast(115%) brightness(100%);} /*картинки*/
-    .flex-container > div { /*блоки под каждый тип накладки*/
+    /*картинки и кнопки*/
+    img,.btn{box-shadow: 2px 5px 5px #977f65;}
+    /*картинки*/
+    img{filter: contrast(115%) brightness(100%);}
+    /*блоки под каждый тип накладки*/
+    .flex-container > div {
       width: 30%;
       margin: 0 1.5% 2% 1.5% !important;
       &:nth-child(4) {margin-left: 18% !important;}
@@ -290,8 +314,10 @@ export default {
   #Delivery{
     background: url("../public/images/background/background_4.jpg") 100% 100% no-repeat;
     background-size:100% 100%;
-    h2{margin-top: 1.8%;} /*заголовок*/
-    #map_svg{ /*svg-карта*/
+    /*заголовок*/
+    h2{margin-top: 1.8%;}
+    /*svg-карта*/
+    #map_svg{
       /*цвета и границы svg*/
       .st0{display:none;fill:#FFFFFF;stroke:#263E57;stroke-width:4;stroke-miterlimit:10;}
       .st1{fill: rgba(228, 191, 165, 0.72);stroke:#662A01;stroke-miterlimit:10;}
@@ -301,13 +327,15 @@ export default {
       .movement{animation: up-down-1 16s infinite;}
       .movement_2{animation: up-down-2 16s infinite;}
       .movement_3{animation: up-down-2 4s infinite;}
-      @keyframes up-down-1{ /*главная метка*/
+      /*главная метка*/
+      @keyframes up-down-1{
         0%{transform: initial;}
         25%{transform: translateY(7px);}
         50%{transform: initial;}
         100%{transform: translateY(-7px);}
       }
-      @keyframes up-down-2{ /*остальные метки метка*/
+      /*остальные метки*/
+      @keyframes up-down-2{
         0%{transform: initial;}
         25%{transform: translateY(-7px);}
         50%{transform: initial;}
@@ -319,12 +347,14 @@ export default {
   #Portfolio{
     background: url("../public/images/background/background_2.jpg") 100% 100% no-repeat;
     background-size:100% 100%;
-    .flex-container > img { /*блоки с картинками*/
+    /*блоки с картинками*/
+    .flex-container > img {
       background: radial-gradient(70% 70%, #ffffff, rgb(210, 206, 211));
       width: 22%;
       height: 100%;
       margin: 0 1.5% 2.2% 1.5% !important;
       box-shadow: 2px 5px 5px #7c5639;
+      /*при наведении*/
       &:hover{
         box-shadow: 2px 5px 5px #4b321f;
       }
@@ -336,15 +366,20 @@ export default {
   #Feedback{
     background: url("../public/images/background/background_5.jpg") 100% 100% no-repeat;
     background-size:100% 100%;
-    input{ /*поле ввода в форме заявки (фио, телефон, почта)*/
+    /*поле ввода в форме заявки (фио, телефон, почта)*/
+    input{
       padding: 25px 10px;
       min-height: 32px;
       margin-bottom: 1%;
     }
-    input:hover, textarea:hover{box-shadow: 7px 7px 7px #161616;} /*наведение на любое поле ввода в форме заявки*/
-    textarea{height: 87% !important;} /*поле ввода в форме заявки (текст)*/
-    .col,.col-5{padding-bottom: 0.5%;} /*параметры сетки бутстрап*/
-    button{ /*кнопка формы заявки*/
+    /*наведение на любое поле ввода в форме заявки*/
+    input:hover, textarea:hover{box-shadow: 7px 7px 7px #161616;}
+    /*поле ввода в форме заявки (текст)*/
+    textarea{height: 87% !important;}
+    /*параметры сетки бутстрап*/
+    .col,.col-5{padding-bottom: 0.5%;}
+    /*кнопка формы заявки*/
+    button{
       display: block;
       margin: 0.5% auto 1% auto;
       padding: 0.25% 2%;
@@ -357,17 +392,21 @@ export default {
       border-radius: 6px;
       background: linear-gradient(rgba(188, 153, 122, 0.58), rgba(233, 223, 201, 0.76)) #eee4ce;
       transition: 0.2s;
-      &:hover{background: linear-gradient(#eee0d7, #eee0d7) #d6c8bf;} /*при наведении*/
-      &:active{background: linear-gradient(#b6a89f, #eee0d7) #d6c8bf;} /*в фокусе*/
+      /*при наведении*/
+      &:hover{background: linear-gradient(#eee0d7, #eee0d7) #d6c8bf;}
+      /*в фокусе*/
+      &:active{background: linear-gradient(#b6a89f, #eee0d7) #d6c8bf;}
     }
   }
   /*Компонент "Контакты"*/
   #Contact{
     background: url("../public/images/background/background_5.jpg") 100% 100% no-repeat; /*при добавлении заменить на background_2*/
     background-size:100% 100%;
-    a { /*ссылки*/
+    /*ссылки*/
+    a {
       text-shadow: 0.025rem 0.025rem 0.025rem #7c644c;
       color: #6a4827;
+      /*при наведении*/
       &:hover{
         text-shadow: 0.025rem 0.025rem 0.025rem #7c644c;
         color: #5a3827;
@@ -375,24 +414,29 @@ export default {
         font-weight: 700;
       }
     }
-    .col-5 div{ /*блок под каждую информацию*/
+    /*блок под каждую информацию*/
+    .col-5 div{
       padding-bottom: 2%;
       background: white;
     }
-    u{ /*название каждой информации*/
+    /*название каждой информации*/
+    u{
       font-size: 1.5rem;
       text-shadow: 0.025rem 0.025rem 0.025rem #7c644c;
       color: #40200b;
       font-weight: 600;
     }
-    .address{ /*адрес*/
+    /*адрес*/
+    .address{
       padding: 4%;
       background: linear-gradient(to right top,rgba(131, 108, 84, 0.35),rgba(131, 108, 84, 0.15),rgba(131, 108, 84, 0.35));
       border-radius: 8px;
     }
-    .map{ /*место под карту*/
+    /*место под карту*/
+    .map{
       padding-top: 1%;
-      iframe { /*карта с гугл-карт*/
+      /*карта с гугл-карт*/
+      iframe {
         min-height: 460px;
         height: auto;
         width:100% !important;
@@ -424,40 +468,51 @@ export default {
     .table th, .table td {padding: 0.2rem !important;}
     /*Компонент с названием и картинкой (самый первый)*/
     #Home{
-      img{width: 85% !important;} /*картинки*/
-      .col:first-child li{ /*элементы списка*/
+      /*картинки*/
+      img{width: 85% !important;}
+      /*элементы списка*/
+      .col:first-child li{
         font-size: 1rem !important;
         padding-bottom: 3% !important;
       }
     }
     /*Компонент "Преимущества"*/
     #Features {
-      .number{ /*цифры*/
+      /*цифры*/
+      .number{
         font-size: 3.5rem !important;
         padding-top: 1.5%;
       }
-      .text { /*текст на светлом фоне компонента*/
+      /*текст на светлом фоне компонента*/
+      .text {
         line-height: 1rem;
         text-shadow: 0.1px 0.1px 0.1px #8f755b;
       }
+      /*блок с преимуществами*/
       .part {
         flex-direction: column;
         padding-bottom: 2%;
-        .col, .col-2, .col-4 {max-width: 100% !important;}  /*параметры сетки бутстрап (цифры, текст, картинки)*/
-        .col-2 {border: none !important;} /*параметры сетки бутстрап (блок с названием и цифрой)*/
-        .col {margin-top: -4% !important;}  /*параметры сетки бутстрап (текст)*/
-        .col-4 {  /*параметры сетки бутстрап ( картинки)*/
+        /*параметры сетки бутстрап (цифры, текст, картинки)*/
+        .col, .col-2, .col-4 {max-width: 100% !important;}
+        /*параметры сетки бутстрап (блок с названием и цифрой)*/
+        .col-2 {border: none !important;}
+        /*параметры сетки бутстрап (текст)*/
+        .col {margin-top: -4% !important;}
+        /*параметры сетки бутстрап ( картинки)*/
+        .col-4 {
           width: 70%;
           display: block;
           margin-left: auto !important;
           margin-right: auto !important;
         }
       }
-      img {width: 90% !important;} /*картинки*/
+      /*картинки*/
+      img {width: 90% !important;}
     }
     /*Компонент "Каталог"*/
     #Catalog {
-      .flex-container > div {/*блоки под каждый тип накладки*/
+      /*блоки под каждый тип накладки*/
+      .flex-container > div {
         width: 47%;
         display: block;
         margin-left: auto !important;
@@ -465,7 +520,9 @@ export default {
         margin-bottom: 5% !important;
         &:nth-child(4) {margin-left: auto !important;}
       }
-      h4 {width: 80%;} /*название накладок*/
+      /*название накладок*/
+      h4 {width: 80%;}
+      /*параметры сетки бутстрап (место под название в модальном окне)*/
       .col {padding-right: 0 !important;}
       #more_details_svg{/*svg в кнопке - (подробнее (вызов модального окна))*/
         width: 22px !important;
@@ -475,54 +532,73 @@ export default {
     }
     /*Компонент "Доставка"*/
     #Delivery {
-      .text_light {line-height: 1.2rem;}  /*текст на темном фоне компонента*/
+      /*текст на темном фоне компонента*/
+      .text_light {line-height: 1.2rem;}
     }
     /*Компонент "Обратная связь"*/
     #Feedback{
       background-size:cover;
-      input{  /*поле ввода в форме заявки (фио, телефон, почта)*/
+      /*поле ввода в форме заявки (фио, телефон, почта)*/
+      input{
         padding: 2.5px 2.5px;
         min-height: 18px;
         height: 25px;
         background: rgba(255, 255, 255, 0.88);
       }
-      .col-5{ /*параметры сетки бутстрап (место под форму)*/
+      /*параметры сетки бутстрап (место под форму)*/
+      .col-5{
         flex: 0 0 100% !important;
         max-width: 100% !important;
       }
-      .col-5,.col{padding: 0 2px !important;} /*параметры сетки бутстрап*/
-      button{ /*кнопка формы заявки*/
+      /*параметры сетки бутстрап*/
+      .col-5,.col{padding: 0 2px !important;}
+      /*кнопка формы заявки*/
+      button{
         margin-top: 3%;
         font-size: 1rem;
         margin-bottom: 4%;
       }
-      .row{flex-direction: column} /*параметры сетки бутстрап*/
-      textarea{ /*поле ввода в форме заявки (текст)*/
+      /*параметры сетки бутстрап*/
+      .row{flex-direction: column}
+      /*поле ввода в форме заявки (текст)*/
+      textarea{
         height: 120px !important;
         background: rgba(255, 255, 255, 0.88);
       }
-      form{padding: 0;} /*форма заявки*/
-      label {margin-bottom: 0.25rem !important;} /*метка в форме заявки*/
+      /*форма заявки*/
+      form{padding: 0;}
+      /*метка в форме заявки*/
+      label {margin-bottom: 0.25rem !important;}
     }
     /*Компонент "Контакты"*/
     #Contact{
-      u {font-size: 0.9rem;} /*название каждой информации*/
-      .col-5, .col {padding: 0 5px !important;} /*параметры сетки бутстрап*/
-      .mail, .telephone {display: none;} /*почта и телефон*/
-      .row { /*параметры сетки бутстрап*/
+      /*название каждой информации*/
+      u {font-size: 0.9rem;}
+      /*параметры сетки бутстрап*/
+      .col-5, .col {padding: 0 5px !important;}
+      /*почта и телефон*/
+      .mail, .telephone {display: none;}
+      /*параметры сетки бутстрап*/
+      .row {
         flex-direction: column;
-        .col-5 { /*параметры сетки бутстрап (место под информацию)*/
+        /*параметры сетки бутстрап (место под информацию)*/
+        .col-5 {
           max-width: 100% !important;
           margin-bottom: 2%;
         }
       }
-      .col-5 div {padding-bottom: 0.2%;} /*блок под каждую информацию*/
-      .text {line-height: 1.2rem;}   /*текст на светлом фоне компонента*/
-      .map{ /*место под карту*/
+      /*блок под каждую информацию*/
+      .col-5 div {padding-bottom: 0.2%;}
+      /*текст на светлом фоне компонента*/
+      .text {line-height: 1.2rem;}
+      /*место под карту*/
+      .map{
         padding-top: 1%;
-        iframe {min-height: 300px;} /*карта с гугл-карт*/
+        /*карта с гугл-карт*/
+        iframe {min-height: 300px;}
       }
-      .address {padding: 1%;} /*адрес*/
+      /*адрес*/
+      .address {padding: 1%;}
     }
   }
 
@@ -543,12 +619,15 @@ export default {
     .text,.text_light,table{font-size: 1.1rem;}
     /*Компонент "Каталог"*/
     #Catalog {
-      .flex-container > div { /*блоки под каждый тип накладки*/
+      /*блоки под каждый тип накладки*/
+      .flex-container > div {
         width: 31.5%;
         margin: 0 0.8% 2% 0.8% !important;
       }
-      h4 {width: 80%;} /*название накладок*/
-      #more_details_svg{ /*svg в кнопке - (подробнее (вызов модального окна))*/
+      /*название накладок*/
+      h4 {width: 80%;}
+      /*svg в кнопке - (подробнее (вызов модального окна))*/
+      #more_details_svg{
         width: 25px !important;
         height: 30px !important;
         margin-top: 8%;
@@ -556,97 +635,129 @@ export default {
     }
     /*Компонент "Обратная связь"*/
     #Feedback{
-      input{padding: 10px 5px;}  /*поле ввода в форме заявки (фио, телефон, почта)*/
-      .col-5 {  /*параметры сетки бутстрап (место под форму)*/
+      /*поле ввода в форме заявки (фио, телефон, почта)*/
+      input{padding: 10px 5px;}
+      /*параметры сетки бутстрап (место под форму)*/
+      .col-5 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
       }
-      .col-5,.col{padding: 0 5px !important;}  /*параметры сетки бутстрап*/
-      textarea{height: 120px !important;} /*поле ввода в форме заявки (текст)*/
-      button{margin-top: 2%;} /*кнопка формы заявки*/
-      form{padding: 0 10%;} /*форма заявки*/
-      label {margin-bottom: 0.25rem !important;} /*метка в форме заявки*/
+      /*параметры сетки бутстрап*/
+      .col-5,.col{padding: 0 5px !important;}
+      /*поле ввода в форме заявки (текст)*/
+      textarea{height: 120px !important;}
+      /*кнопка формы заявки*/
+      button{margin-top: 2%;}
+      /*форма заявки*/
+      form{padding: 0 10%;}
+      /*метка в форме заявки*/
+      label {margin-bottom: 0.25rem !important;}
     }
     /*Компонент "Контакты"*/
     #Contact{
-      u {font-size: 1.2rem;} /*название каждой информации*/
-      .col-5,.col {padding: 0 5px !important;} /*параметры сетки бутстрап*/
-      .mail, .telephone {display: none;} /*почта и телефон*/
-      .row { /*параметры сетки бутстрап*/
+      /*название каждой информации*/
+      u {font-size: 1.2rem;}
+      /*параметры сетки бутстрап*/
+      .col-5,.col {padding: 0 5px !important;}
+      /*почта и телефон*/
+      .mail, .telephone {display: none;}
+      /*параметры сетки бутстрап*/
+      .row {
         flex-direction: column;
-        .col-5 { /*параметры сетки бутстрап (место под информацию)*/
+        /*параметры сетки бутстрап (место под информацию)*/
+        .col-5 {
           max-width: 100% !important;
           margin-bottom: 2%;
         }
       }
-      .col-5 div {padding-bottom: 0.2%;} /*блок под каждую информацию*/
-      .text {line-height: 1.4rem;}   /*текст на светлом фоне*/
-      .map{ /*место под карту*/
+      /*блок под каждую информацию*/
+      .col-5 div {padding-bottom: 0.2%;}
+      /*текст на светлом фоне*/
+      .text {line-height: 1.4rem;}
+      /*место под карту*/
+      .map{
         padding-top: 1%;
-        iframe {min-height: 300px;}/*карта с гугл-карт*/
+        /*карта с гугл-карт*/
+        iframe {min-height: 300px;}
       }
-      .address {padding: 1%;}/*адрес*/
+      /*адрес*/
+      .address {padding: 1%;}
     }
   }
   @media screen and (max-width: 768px) {
     /*Компонент с названием и картинкой (самый первый)*/
     #Home{
       background-size:cover;
-      img{ /*картинки*/
+      /*картинки*/
+      img{
         width: 80%;
         display: block;
         margin-left: auto;
         margin-right: auto
       }
-      .row{ /*параметры сетки бутстрап*/
+      /*параметры сетки бутстрап*/
+      .row{
         flex-direction: column-reverse;
-        .col:last-child{padding: 3%;} /*последний элемент*/
+        /*последний элемент*/
+        .col:last-child{padding: 3%;}
       }
-      .col:first-child li{ /*элементы списка */
+      /*элементы списка*/
+      .col:first-child li{
         font-size: 1.15rem;
         padding-bottom: 3.5%;
       }
-      .carousel-indicators { /*индикаторы карусели*/
+      /*индикаторы карусели*/
+      .carousel-indicators {
         display: none !important;
       }
     }
     /*Компонент "Преимущества"*/
     #Features{
-      .number {font-size: 3rem;}  /*цифры*/
-      .col-2 { /*параметры сетки бутстрап (блок с названием и цифрой)*/
+      /*цифры*/
+      .number {font-size: 3rem;}
+      /*параметры сетки бутстрап (блок с названием и цифрой)*/
+      .col-2 {
         flex: 0 0 20% !important;
         max-width: 20% !important;
         font-size: 1.1rem;
         line-height: 2.5rem !important;
       }
-      .col-2, .col{padding: 1.2% 0.6%;}  /*параметры сетки бутстрап (цифры, текст)*/
-      .col-4 {  /*параметры сетки бутстрап (картинки)*/
+      /*параметры сетки бутстрап (цифры, текст)*/
+      .col-2, .col{padding: 1.2% 0.6%;}
+      /*параметры сетки бутстрап (картинки)*/
+      .col-4 {
         flex: 0 0 27% !important;
         max-width: 27% !important;
       }
-      .text { /*текст на светлом фоне компонента*/
+      /*текст на светлом фоне компонента*/
+      .text {
         line-height: 1.3rem;
         text-shadow: 0.1px 0.1px 0.1px #8f755b;
       }
     }
     /*Компонент "Доставка"*/
     #Delivery {
-      .text_light {line-height: 1.4rem;}  /*текст на темном фоне компонента*/
-      .col:first-child {  /*параметры сетки бутстрап (место под карту)*/
+      /*текст на темном фоне компонента*/
+      .text_light {line-height: 1.4rem;}
+      /*параметры сетки бутстрап (место под карту)*/
+      .col:first-child {
         display: block;
         margin-left: auto;
         margin-right: auto;
         max-width: 65%;
       }
-      svg { /*svg-карта*/
+      /*svg-карта*/
+      svg {
         margin-top: -15%;
         padding-bottom: 5%;
       }
-      .row {flex-direction: column-reverse;} /*параметры сетки бутстрап (карта и текст)*/
+      /*параметры сетки бутстрап (карта и текст)*/
+      .row {flex-direction: column-reverse;}
     }
     /*Компонент "Портфолио"*/
     #Portfolio {
-      .flex-container > img { /*блоки с картинками*/
+      /*блоки с картинками*/
+      .flex-container > img {
         background: radial-gradient(70% 70%, #ffffff, rgb(210, 206, 211));
         width: 30%;
         margin: 0 1.5% 2.2% 1.5% !important;
@@ -666,28 +777,35 @@ export default {
     .text,.text_light,table{font-size: 1.1rem;}
     /*Компонент с названием и картинкой (самый первый)*/
     #Home{
-      .col:first-child li{ /*элементы списка */
+      /*элементы списка*/
+      .col:first-child li{
         font-size: 1.15rem;
         padding-bottom: 3.5%;
       }
     }
     /*Компонент "Преимущества"*/
     #Features {
-      .number {font-size: 3.5rem;} /*цифры*/
-      .col-2 { /*параметры сетки бутстрап (блок с названием и цифрой)*/
+      /*цифры*/
+      .number {font-size: 3.5rem;}
+      /*параметры сетки бутстрап (блок с названием и цифрой)*/
+      .col-2 {
         font-size: 1.2rem;
         line-height: 2.5rem !important;
       }
-      .col-2,.col {padding: 1% 0.6%;}  /*параметры сетки бутстрап (цифры, текст)*/
+      /*параметры сетки бутстрап (цифры, текст)*/
+      .col-2,.col {padding: 1% 0.6%;}
     }
     /*Компонент "Каталог"*/
     #Catalog{
-      .flex-container > div { /*блоки под каждый тип накладки*/
+      /*блоки под каждый тип накладки*/
+      .flex-container > div {
         width: 31%;
         margin: 0 1% 2% 1% !important;
       }
-      h4 {width: 84%;} /*название накладок*/
-      #more_details_svg{  /*svg в кнопке - (подробнее (вызов модального окна))*/
+      /*название накладок*/
+      h4 {width: 84%;}
+      /*svg в кнопке - (подробнее (вызов модального окна))*/
+      #more_details_svg{
         width: 30px !important;
         height: 30px !important;
         margin-top: 6%;
@@ -695,11 +813,13 @@ export default {
     }
     /*Компонент "Обратная связь"*/
     #Feedback{
-      input{padding: 20px 10px;} /*поле ввода в форме заявки (фио, телефон, почта)*/
+      /*поле ввода в форме заявки (фио, телефон, почта)*/
+      input{padding: 20px 10px;}
     }
     /*Компонент "Контакты"*/
     #Contact{
-      u{font-size: 1.15rem;} /*название каждой информации*/
+      /*название каждой информации*/
+      u{font-size: 1.15rem;}
     }
   }
   @media screen and (min-width: 992px)and (max-width: 1200px) {
@@ -712,23 +832,28 @@ export default {
     .text,.text_light,table{font-size: 1.2rem;}
     /*Компонент с названием и картинкой (самый первый)*/
     #Home{
-      .col:first-child li{ /*элементы списка */
+      /*элементы списка */
+      .col:first-child li{
         font-size: 1.2rem;
         padding-bottom: 3.5%;
       }
     }
     /*Компонент "Преимущества"*/
     #Features {
-      .number {font-size: 4rem;}  /*цифры*/
-      .col-2 { /*параметры сетки бутстрап (блок с названием и цифрой)*/
+      /*цифры*/
+      .number {font-size: 4rem;}
+      /*параметры сетки бутстрап (блок с названием и цифрой)*/
+      .col-2 {
         font-size: 1.4rem;
         line-height: 2.7rem !important;
       }
-      .col-2,.col {padding: 1% 0.6%;} /*параметры сетки бутстрап (цифры, текст)*/
+      /*параметры сетки бутстрап (цифры, текст)*/
+      .col-2,.col {padding: 1% 0.6%;}
     }
     /*Компонент "Контакты"*/
     #Contact{
-      u{font-size: 1.3rem;} /*название каждой информации*/
+      /*название каждой информации*/
+      u{font-size: 1.3rem;}
     }
   }
 </style>
