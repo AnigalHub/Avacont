@@ -76,7 +76,7 @@
         border-bottom: 5px #4E2B0B !important;
         padding: 0 !important;
     }
-    /* все кнопки в меню*/
+    /*все кнопки в меню*/
     .nav-link{
         color: #4E2B0B !important;
         padding-right: 1rem !important;
@@ -107,7 +107,7 @@
         text-shadow: 0.025rem 0.025rem 0.025rem #4e2b0b;
     }
     @media screen and (max-width: 768px) {
-        /* все кнопки в меню*/
+        /*все кнопки в меню*/
         .nav-link {
             font-size: 1rem !important;
             padding: 0.35rem 1rem !important;
