@@ -21,7 +21,7 @@
                     {src: "./images/portfolio/pad_on_log.jpg", alt: "Накладка_на_бревно",},
                     {src: "./images/portfolio/double_pad_on_log.jpg", alt: "Двойная_накладка_на_бревно",},
                     {src: "./images/portfolio/pad_on_switch.jpg", alt: "Накладка_под_выключатель",},
-                    {src: "./images/portfolio/pad_with_hidden_installation.jpeg", alt: "Накладка_со_скрытой_установкой",},
+                    {src: "./images/portfolio/pad_with_hidden_installation.jpg", alt: "Накладка_со_скрытой_установкой",},
                     {src: "./images/portfolio/retro_pad.jpg", alt: "Ретро_накладка",},
                     {src: "./images/portfolio/retro_pad_under_log.jpg", alt: "Ретро_накладка_под_бревно",},
                     {src: "./images/portfolio/pad_under_different_sockets.jpg", alt: "Накладка_под_разные_розетки",},
