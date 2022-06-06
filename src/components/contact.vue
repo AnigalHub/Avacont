@@ -6,11 +6,11 @@
             <b-row>
                 <b-col cols="5">
                     <div class="address text">
-                        <div class="telephone"><u> Телефон: </u><a :href="'tel:'+ address.phone"> {{address.phone}}</a></div>
-                        <div class="mail"><u>E-mail:</u><a :href="'mailto:'+ address.mail">{{address.mail}}</a></div>
-                        <div><u>Часы работы: </u><br>{{address.working_hours}}</div>
-                        <div><u> Адрес производства: </u><br>{{address.manufacturers_address}}</div>
-                        <div><u> Адрес офиса продаж: </u><br>{{address.sales_office_address}}</div>
+                        <div class="telephone"><u> Телефон:</u><a :href="'tel:'+ address.phone"> {{address.phone}}</a></div>
+                        <div class="mail"><u>E-mail:</u><a :href="'mailto:'+ address.mail"> {{address.mail}}</a></div>
+                        <div><u>Часы работы:</u><br> {{address.working_hours}}</div>
+                        <div><u> Адрес производства:</u><br> {{address.manufacturers_address}}</div>
+                        <div><u> Адрес офиса продаж:</u><br> {{address.sales_office_address}}</div>
                     </div>
                 </b-col>
                 <b-col>
