@@ -39,7 +39,7 @@
                 window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
             },
             scrollToId(event){
-                let offsetY = 0;
+                let offsetY = 20;
                 if(this.isExpanded){
                     let nav = document.getElementById(("Nav"));
                     let bounds =  nav.getBoundingClientRect();
